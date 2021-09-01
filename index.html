@@ -12,8 +12,11 @@
       crossorigin="anonymous"
     />
     
+    <!-- Bootstrap ICON - start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    
     <!-- CSS - start -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <!-- CSS - end -->
     
   </head>
@@ -28,10 +31,46 @@
       </div>
     </nav>
     <!-- Navbar sin botones - end -->
-  
-    <!-- Boton de prueba - start -->
-    <a href="navbtn.html" class="btn btn-primary">Ver Navbar con botones</a>
-    <!-- Boton de prueba - end -->
+    
+    <!-- Navbar con botones - start -->
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
+          <img src="public/img/Logo.svg" alt="" width="54" height="54" class="d-inline-block" id="logonsb"><b class="textnsb green">Colab</b> <b class="textnsb orange">Orange</b>
+        </a>
+      
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          </ul>
+          
+          <span class="navbar-text">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li>
+                <form class="d-flex input-group" id="buscar">
+                  <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" id="txtbuscar">
+                  <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="textncb">Crear un proyecto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="textncb">Buscar un proyecto</a>
+              </li>
+              <li class="nav-item text-end">
+                <a class="nav-link btn btn-primary" href="#" id="textbtn">Iniciar Sesión</a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar con botones - end -->
+    
     
     <h1>ColabOrange conecta programadores y diseñadores con ideas.</h1>
     <script src="js/main.js"></script>
