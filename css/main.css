@@ -2,6 +2,7 @@
 :root {
     /* Navbar sin botones - start */
     --navbar-bg-color: #125E8A;
+    --navbar-hover-color: #155479;
     
     --green-color: #41D3BD;
     --orange-color: #FF9D00;
@@ -10,6 +11,14 @@
     --navbar-max-width: 1280px;
     --navbar-header-height: 72px;
     /* Navbar sin botones - end */
+    
+    /* Navbar con botones - start */
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    
+    --navbar-font-cb: 'Prompt';
+    --navbar-font-buscar: 'Ubuntu';
+    /* Navbar con botones - end */
 }
 /************** Custom Properties ***************/
 
@@ -26,7 +35,8 @@
     }
     /* Bootstrap navbar - end */
 
-#navbg{
+#navbg,
+#navbarText{
     background-color: var(--navbar-bg-color); /* color de fondo del navbar */
 }
 
@@ -52,3 +62,82 @@
     color: var(--orange-color);
 }
 /* Navbar sin botones - end */
+
+
+/************** Navbar con botones - start ***************/
+
+#textncb{ /* texto CREAR UN PROYECTO / BUSCAR UN PROYECTO */
+    color: var(--white-color);
+    
+    font-family: var(--navbar-font-cb);
+    font-weight: 500;
+    font-style: normal;
+    font-style: 18px;
+    line-height: 20px;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#textbtn{ /* texto INICIAR SESION */
+    color: var(--black-color);
+    background-color: var(--green-color);
+    
+    font-family: var(--navbar-font-cb);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    
+    margin-right: 20px;
+    padding: 9px 15px;
+    
+    border: 0px solid var(--green-color);
+    border-radius: 15px;
+    
+    vertical-align: middle;
+}
+
+#buscar{ /* texto INPUT BUSCAR */
+    width: 100%;
+    font-family: var(--navbar-font-buscar);
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 20px;
+    
+    /* padding-left: 10%; */
+}
+
+#txtbuscar{
+    color: var(--black-color);
+}
+#txtbuscar::placeholder{ /* texto del placeholder del INPUT BUSCAR */
+    color: var(--navbar-bg-color);
+}
+
+#textncb:hover{ /* hover de CREAR UN PROYECTO / BUSCAR UN PROYECTO */
+    background-color: var(--navbar-hover-color);
+}
+
+
+/* media query MOBILE/TABLET - start */
+@media only screen and (max-width: 991px) {
+    #textncb{
+        margin-bottom: 5px;
+        text-align: end;
+    }
+    
+    #textbtn{
+        display: inline;
+        margin-left: 20px;
+    }
+    
+    #buscar{
+        width: 100%;
+        padding-left: 50%;
+    }
+}
+/* media query MOBILE/TABLET - end */
+
+/************** Navbar con botones - end ***************/
