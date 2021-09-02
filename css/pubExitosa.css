@@ -1,0 +1,41 @@
+/************** Custom Properties ***************/
+:root {
+    
+    --pubEx-title-color: #125E8A;
+    --pubEx-font-title: 'Lora';
+    
+}
+/************** Custom Properties ***************/
+
+/************** Publicacion Exitosa - start ***************/
+
+#pubExTitle{ /* titulo: ¡Felicidades! Tu proyecto ya ha sido publicado */
+    color: var(--pubEx-title-color);
+    
+    display: block; /* titulo centrado */
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: var(--pubEx-font-title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    
+    width: 658px;
+    
+    margin-top: 93px;
+}
+
+/* Imagen centro - start */
+#pubExImg{
+    display: block; /* centrado de imagen */
+    margin-left: auto;
+    margin-right: auto;
+	
+	margin-top: 35px;
+}
+/* Imagen centro - end */
+
+/************** Publicacion Exitosa - end ***************/
