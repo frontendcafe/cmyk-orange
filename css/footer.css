@@ -1,0 +1,42 @@
+:root{
+  --main-color: rgba(4, 56, 93, 1);
+  --text-prima: rgba(255, 157, 0, 1);
+  --text-secon: rgba(65, 210, 189, 1);
+  --text-detal: hsla(255, 255, 255, 1);
+
+  --font-logo : 'DM Serif Display';
+  --font-detal: 'DM Sans';
+}
+
+footer{
+  background-color: var(--main-color);
+  font-family: var(--font-detal);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.footer-icon{
+  width: 72.74px;
+  padding: 16px 0px;
+}
+
+.textlog{
+    font-weight: normal;
+    font-family: var(--font-logo);
+    font-style: normal;
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: -1%;
+
+    vertical-align: middle;
+    padding: 26px 0px;
+}
+
+.textlog.orange{
+    color: var(--text-prima);
+}
+
+.textlog.green{
+    color: var(--text-secon);
+}
