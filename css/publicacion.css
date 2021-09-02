@@ -1,0 +1,139 @@
+/************** Custom Properties ***************/
+:root {
+    
+    --orange-color: #FF9D00;
+    
+    /* Publicacion de proyecto - start */
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --formInput-color: #696871;
+    --pub-formInput-bg-color: #FFE7BA;  
+    --pub-formBtn-color: #031D44;
+    --pub-formBtn-bg-color: #FB8500;
+    --pub-title-color: #125E8A;
+    
+    --pub-font-title: 'Lora';
+    --pub-font-formLabel: 'Roboto';
+    --pub-font-formInput: 'Nunito';
+    --pub-font-formBtn: 'PT Sans';
+    
+    /* Publicacion de proyecto - end */
+}
+/************** Custom Properties ***************/
+
+
+/************** Publicacion de proyecto - start ***************/
+/* Icono flecha naranja - start */
+#arrowOrange{
+    margin-top: 54px;
+    margin-left: 69px;
+}
+/* Icono flecha naranja - end */
+
+#pubTitle{ /* titulo: ¿De que trata tu proyecto? */
+    font-family: var(--pub-font-title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    
+    color: var(--pub-title-color);
+}
+
+#pubColumn{ /* division en columnas Formulario / imagen */
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 118px; /* distancia entre Titulo y Formulario */
+    margin-bottom: 116px;
+}
+
+/* Imagen - start */
+#pubColumn > img{ /* imagen lado derecho */
+    width: 639px;
+	height: 650px;
+	object-fit: none; /* recorte de la imagen */
+}
+/* Imagen - end */
+
+/* Formulario - start */
+#pubColumn > form{ /* formulario */
+	border: 1px solid var(--orange-color);
+    box-sizing: border-box;
+    border-radius: 24px;
+    
+    padding: 46px 52px 51px 53px;
+}
+
+#pubColumn > form > div > label{ /* todos los form label */
+    color: var(--black-color);
+    
+    font-family: var(--pub-font-formLabel);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 23px;
+    
+    margin-bottom: 10px;
+}
+
+#pubColumn > form > div > input{ /* los 03 form input */
+    color: var(--formInput-color);
+    background-color: var(--pub-formInput-bg-color);
+    
+    font-family: var(--pub-font-formInput);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    
+    padding-left: 19px;
+    
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#formDP{ /* form textarea */
+    resize: none;
+    
+    color: var(--formInput-color);
+    background-color: var(--pub-formInput-bg-color);
+    
+    font-family: var(--pub-font-formInput);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    
+    padding-top: 22px;
+    padding-left: 19px;
+    
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+#formBtn{ /* form boton siguiente */
+    color: var(--pub-formBtn-color);
+    background-color: var(--pub-formBtn-bg-color);
+    
+    font-family: var(--pub-font-formBtn);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    
+    border: 1px solid var(--pub-formBtn-bg-color);
+    border-radius: 10px;
+    
+    height: 60px;
+    width: 400px;
+    
+    margin-top: 40px;
+}
+
+/* Formulario - end */
+
+/************** Publicacion de proyecto - end ***************/
