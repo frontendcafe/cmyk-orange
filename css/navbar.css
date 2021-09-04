@@ -105,14 +105,29 @@
     font-style: normal;
     font-size: 18px;
     line-height: 20px;
-    
-    /* padding-left: 10%; */
 }
 
 #txtbuscar{
     color: var(--black-color);
+    border-top-left-radius: 15px; /* solo border top-bottom left */
+    border-bottom-left-radius: 15px;
+    
+    border: 0px solid var(--white-color);
 }
+
 #txtbuscar::placeholder{ /* texto del placeholder del INPUT BUSCAR */
+    color: var(--navbar-bg-color);
+}
+
+#basic-addon2{ /* icono Lupa - search bar */
+    border-top-right-radius: 15px; /* solo border top-bottom right */
+    border-bottom-right-radius: 15px;
+    
+    border: 0px solid var(--white-color);
+    background-color: var(--white-color);
+}
+
+#basic-addon2 > i{ /* color de icono lupa */
     color: var(--navbar-bg-color);
 }
 
