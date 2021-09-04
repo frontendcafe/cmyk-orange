@@ -1,0 +1,116 @@
+/************** Custom Properties ***************/
+:root {
+    
+    --orange-color: #FF9D00;
+    
+    /* Registro paso 2 - start */
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --textarea-color: #9EA8BD;
+    
+    --regp2-textarea-bg-color: #FFE7BA;  
+    --regp2-title-color: #125E8A;
+    
+    --regp2-font-title: 'Lora';
+    --regp2-font-textarea: 'Roboto';
+    
+    /* Registro paso 2 - end */
+}
+/************** Custom Properties ***************/
+
+
+/************** Registro paso 2 - start ***************/
+
+#regp2Title{ /* titulo: Solo queda un paso mas */
+    color: var(--regp2-title-color);
+    
+    font-family: var(--regp2-font-title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    
+    margin-top: 67px;
+}
+
+#regp2Column{ /* division en columnas Columna izquierda / imagen lado derecho */
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 117px; /* distancia entre Titulo y Columna izquierda */
+    margin-bottom: 108px;
+}
+
+/* Imagen - start */
+#regp2Column > img{ /* imagen lado derecho */
+    width: 639px;
+	height: 730px;
+	object-fit: none; /* recorte de la imagen */
+	
+	margin-top: 35px;
+}
+/* Imagen - end */
+
+/* Columna izquierda - start */
+#regp2Column > div{ /* izquierda */
+    display: flex;
+    flex-direction: column;
+    
+    width: 504px;
+
+	border: 1px solid var(--orange-color);
+    box-sizing: border-box;
+    border-radius: 24px;
+    
+    padding-top: 26px;
+}
+
+#regp2Column > div > h1{ /* titulos: Agrega tu foto / Contanos un poco acerca de vos */
+    color: var(--regp2-title-color);
+
+    font-family: var(--regp2-font-title);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 61px;
+    
+    text-align: center;
+    
+    margin-bottom: 0px;
+}
+
+#regp2Column > div > img{ /* Circulo verde */
+    display: block;
+    
+    margin: 27px auto 10px auto;
+    
+    width: 187px;
+    height: 185px;
+}
+
+#textarea{ /* textarea */
+    resize: none;
+    
+    color: var(--textarea-color);
+    background-color: var(--regp2-textarea-bg-color);
+    
+    font-family: var(--regp2-font-textarea);
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 21px;
+    
+    padding-top: 20px;
+    padding-left: 20px;
+    
+    margin: 28px 36px 35px 29px;
+    
+    width: 439px;
+    height: 274px;
+    border-radius: 10px;
+}
+
+/* Columna izquierda - end */
+
+/************** Registro paso 2 - end ***************/
