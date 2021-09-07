@@ -1,0 +1,116 @@
+/************** Custom Properties ***************/
+:root {
+  --orange-color: #ff9d00;
+
+  /* Registro paso 2 - start */
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --textarea-color: #9ea8bd;
+
+  --regp1-textarea-bg-color: #ffe7ba;
+  --regp1-title-color: #125e8a;
+
+  --regp1-font-title: 'Lora';
+  --regp1-font-textarea: 'Roboto';
+
+  /* Registro paso 1 - end */
+}
+/************** Custom Properties ***************/
+
+/************** Registro paso 1 - start ***************/
+
+.title--principal {
+  /* titulo: Solo queda un paso mas */
+  color: var(--regp1-title-color);
+
+  font-family: var(--regp1-font-title);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+
+  margin-top: 67px;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited {
+  background-color: rgba(65, 211, 189, 1);
+  border: none;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 9px 15px;
+}
+
+.regp1Column {
+  /* division en columnas Columna izquierda / imagen lado derecho */
+  display: flex;
+  justify-content: center;
+
+  margin-top: 117px; /* distancia entre Titulo y Columna izquierda */
+  margin-bottom: 108px;
+}
+
+/* Imagen - start */
+.regp1Column > img {
+  /* imagen lado derecho */
+  width: 639px;
+  height: 730px;
+  object-fit: none; /* recorte de la imagen */
+
+  margin-top: 35px;
+}
+/* Imagen - end */
+
+/* Columna izquierda - start */
+#regp2Column > div {
+  /* izquierda */
+  display: flex;
+  flex-direction: column;
+
+  width: 504px;
+
+  border: 1px solid var(--orange-color);
+  box-sizing: border-box;
+  border-radius: 24px;
+
+  padding-top: 26px;
+}
+
+.regp1Column > div > h1 {
+  /* titulos: Agrega tu foto / Contanos un poco acerca de vos */
+  color: var(--regp2-title-color);
+
+  font-family: var(--regp2-font-title);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 61px;
+
+  text-align: center;
+
+  margin-bottom: 0px;
+}
+
+.regp1Column > div > img {
+  /* Circulo verde */
+  display: block;
+
+  margin: 27px auto 10px auto;
+
+  width: 187px;
+  height: 185px;
+}
+
+/* Columna izquierda - end */
+
+/************** Registro paso 1 - end ***************/
