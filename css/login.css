@@ -1,0 +1,97 @@
+#sin-cuenta {
+  font-family: "Lora", sans-serif;
+  background: #41d3bd;
+  border-radius: 15px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  color: #125e8a;
+  font-family: "Lora", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+#btn-inicio {
+  width: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #031d44;
+  background: #41d3bd;
+  border-radius: 10px;
+}
+
+.form-login {
+  background: #ffffff;
+  border: 1px solid #ff9d00;
+  box-sizing: border-box;
+  border-radius: 24px;
+}
+
+.mensaje-cabecera > h1 {
+  font-family: "Lora", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 61px;
+  color: #125e8a;
+}
+
+#link-contraseña > a {
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  color: #000000;
+}
+
+.form-control {
+  background: #ffe7ba;
+  border-radius: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+.placeholder {
+  color: #696871;
+}
+
+.form-label {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #000000;
+}
+
+#img-login {
+  height: 650px;
+}
+
+#btn-inicio-google {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #41d3bd;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #031d44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
