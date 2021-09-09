@@ -32,10 +32,7 @@
 
   margin-top: 67px;
 }
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited {
+.btn-principal {
   background-color: rgba(65, 211, 189, 1);
   border: none;
   font-family: Nunito;
@@ -51,6 +48,12 @@
   padding: 9px 15px;
 }
 
+.img {
+  height: 650px;
+}
+
+.title {
+}
 .regp1Column {
   /* division en columnas Columna izquierda / imagen lado derecho */
   display: flex;
@@ -72,7 +75,7 @@
 /* Imagen - end */
 
 /* Columna izquierda - start */
-#regp2Column > div {
+.regp1Column > div {
   /* izquierda */
   display: flex;
   flex-direction: column;
