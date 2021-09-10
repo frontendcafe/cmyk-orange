@@ -1,0 +1,23 @@
+{
+  "name": "cmyk-orange",
+  "version": "1.0.0",
+  "description": "clone the project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontendcafe/cmyk-orange.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frontendcafe/cmyk-orange/issues"
+  },
+  "homepage": "https://github.com/frontendcafe/cmyk-orange#readme",
+  "dependencies": {
+    "firebase": "^9.0.2"
+  }
+}
