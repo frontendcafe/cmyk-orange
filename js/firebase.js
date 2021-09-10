@@ -1,11 +1,3 @@
-// // Importar las funciones que se necesiten del SDK de firebase
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js";
-// import {
-//   getAuth,
-//   onAuthStateChanged,
-// } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js";
-
 // Configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyC_yF5Y90-GsKfO7fZWmS6OQFv5Gj7B8a8",
@@ -19,8 +11,7 @@ const firebaseConfig = {
 // // Inicializando Firebase
 // const app = initializeApp(firebaseConfig);
 // const auth = getAuth(firebaseConfig);
-const db = getFirestore(firebaseConfig);
-
+const db = firebase.firestore();
 //Conocer si el usuario esta o no logueado
 // const isAuth = onAuthStateChanged(auth, (user) => {
 //   if (user !== null) {
