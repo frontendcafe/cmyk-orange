@@ -34,57 +34,51 @@
     </nav>
     <!-- Navbar sin botones - end -->
     
-    <div class="container">
-      <div class="row text-center my-3">
-
-      
     
     <!-- Registro paso 1 - start -->
    
-    <h1 class="title--principal">¡Te damos la bienvenida a la <br> comunidad!</h1>
-    <div class="d-grid gap-2 col-3 mx-auto my-3">
-    <button type="button" class="btn btn-lg btn-principal">Ya estoy registrado</button>
-  </div>
-    
-
-        <div class="row regp1Column ">
-          <div class="form">
-            <div class= "title text-center my-3"><h1>Registro</h1></div>
-          <div class="form mx-5">
-            <form action="#">
-            <label for="name" class="form-label">Nombre y Apellido</label>
-            <input type="text" class="form-control" id="name" placeholder="Nombre y Apellido">
-            
-            <label for="email1" class="form-label">Dirección de Email</label>
-            <input type="email" class="form-control" id="email1">
-          
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-          
-            <label for="exampleInputPassword1" class="form-label">Repetir Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+    <div class="container">
+      <div class="row text-center">
+          <div class="title--principal">
+              <h1>¡Te damos la bienvenida a la <br> comunidad!</h1>
           </div>
-         
-          <div class="mt-5 mb-4 w-100">
-            <button id="btn-inicio" class="btn btn-lg btn-block py-3" type="button">Iniciar
-                Sesión</button>
-        </div>
-        <div class="my-4 w-100">
-            <button id="btn-inicio-google" class="btn btn-lg btn-block py-3" type="button">
-                <img src="Vector.png" class="px-2" alt=""> Iniciar con Google</button>
-        </div>
-      
+          <div class="d-grid gap-2 col-3 mx-auto my-3">
+              <button class="py-3 btn-principal" type="button">Ya estoy registrado</button>
+          </div>
       </div>
-    
-    </form>
+      <div class="row">
+          <div class="form--login__principal col center my-5">
+              <div class="form--login__title text-center my-4">
+                  <h2>Registro</h2>
+              </div>
+              <div class="form mx-3">
+                  <form action="#">
+                      <div class="w-full">
+                        <label for="nombre" class="form-label">Nombre y Apellido</label>
+                          <input type="text" class="form-control"  placeholder="Nombre y Apellido">
+                          <label for="email" class="form-label">Dirección de email</label>
+                          <input type="email" class="form-control"  placeholder="E-mail">
+                          <label for="password" class="form-label">Contraseña</label>
+                          <input type="password" class="form-control" id="password" >
+                          <label for="password" class="form-label">Repetir contraseña</label>
+                          <input type="password" class="form-control" id="password">
+ 
+                          <div class="mt-5 mb-2 w-100">
+                              <button class="btn btn-lg btn--form btn-block py-2" type="button">Registrarme</button>
+                          </div>
+                          <div class="my-4 w-100">
+                              <button class="btn btn-lg btn--form__google btn-block py-2" type="button">
+                                  <img src="public/img/Vector.png" class="px-2" alt=""> Iniciar con Google</button>
+                          </div>
+                      </div>
+              </div>
+              </form>
+          </div>
+          <div class="img-login col">
+              <img id="img-login" src="public/img/logoRegistro1.svg" alt="">
+          </div>
+      </div>
   </div>
-    <div>
-      <img class= "img" src="public/img/logoRegistro1.svg"" alt="">
-    </div>
-      
-      
-     
-    </div>
     <!-- Registro paso 1 - end -->
   </div>
   
