@@ -8,24 +8,12 @@ const firebaseConfig = {
   appId: "1:179241068454:web:5e1763ec4bbee8ef5d5167",
 };
 
-// // Inicializando Firebase
-// const app = initializeApp(firebaseConfig);
-// const auth = getAuth(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-//Conocer si el usuario esta o no logueado
-// const isAuth = onAuthStateChanged(auth, (user) => {
-//   if (user !== null) {
-//     console.log("logged in"); //
-//   } else {
-//     console.log("No user");
-//   }
-// });
 
-//Obtener la data de firebase
-db.collection("proyecto")
-  .get()
-  .then((snapshot) => {
-    snapshot.docs.forEach((file) => {
-      console.log(file.data);
-    });
-  });
+const projects = async () => {
+  const res = await db.collection("proyecto").doc("AIanVAIfg3Q0fBdfxuSz").get();
+  console.log(res.data());
+  return res.data();
+};
+projects();
