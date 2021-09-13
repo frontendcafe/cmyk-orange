@@ -105,3 +105,6 @@ h4 {
   background: #38ad9c;
   color: #ffffff;
 }
+.logo:hover .google-icon {
+  fill: white;
+}
