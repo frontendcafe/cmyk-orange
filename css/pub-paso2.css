@@ -1,0 +1,217 @@
+/************** Custom Properties ***************/
+:root {
+    
+    --orange-color: #FF9D00;
+    
+    /* Publicacion paso 2 - start */
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+    --formInput-color: #696871;
+    --pub-formInput-bg-color: #FFE7BA;  
+    --pub-formBtn-color: #031D44;
+    --pub-formBtn-bg-color: #FB8500;
+    --pub-title-color: #125E8A;
+    
+    --pubp2-btnFormDiv-color: #FFD5A6;
+    --pubp2-text-btnFormDiv-color: #202020;
+    
+    --pub-font-title: 'Lora';
+    --pub-font-formLabel: 'Roboto';
+    --pub-font-formInput: 'Nunito';
+    --pub-font-formBtn: 'PT Sans';
+    
+    --pubp2-font-btnFormDiv: 'Ubuntu';
+    
+    /* Publicacion paso 2 - end */
+}
+/************** Custom Properties ***************/
+
+
+/************** Publicacion paso 2 - start ***************/
+/* Icono flecha naranja - start */
+#arrowOrange{
+    margin-top: 54px;
+    margin-left: 69px;
+}
+/* Icono flecha naranja - end */
+
+#pubp2Title{ /* titulo: ¿Con que tecnologias se va a trabajar? */
+    font-family: var(--pub-font-title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 123px;
+    
+    color: var(--pub-title-color);
+}
+
+#pubp2Column{ /* division en columnas Formulario / imagen */
+    display: flex;
+    justify-content: center;
+    
+    margin-top: 118px; /* distancia entre Titulo y Formulario */
+    margin-bottom: 116px;
+}
+
+/* Imagen - start */
+#pubp2Column > img{ /* imagen lado derecho */
+    width: 639px;
+	height: 650px;
+	object-fit: none; /* recorte de la imagen */
+}
+/* Imagen - end */
+
+/* Formulario - start */
+#pubp2Column > form{ /* formulario */
+	border: 1px solid var(--orange-color);
+    box-sizing: border-box;
+    border-radius: 24px;
+    
+    padding: 46px 52px 51px 53px;
+}
+
+#pubp2Column > form > div > label{ /* todos los form label */
+    color: var(--black-color);
+    
+    font-family: var(--pub-font-formLabel);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 23px;
+    
+    margin-bottom: 10px;
+}
+
+#pubp2Column > form > div > input{ /* estilos para los form input */
+    color: var(--formInput-color);
+    background-color: var(--pub-formInput-bg-color);
+    
+    font-family: var(--pub-font-formInput);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    
+    padding-left: 19px;
+    
+    width: 433px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#pubp2Column > form > div > select{ /* estilos para select */
+    color: var(--formInput-color);
+    background-color: var(--pub-formInput-bg-color);
+    
+    font-family: var(--pub-font-formInput);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 25px;
+    
+    padding-left: 19px;
+    
+    width: 433px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+
+#formDiv{ /* form div inicialmente en blanco que alberga los items seleccionados */
+    width: 433px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#formDiv > div{ /* separacion entre cada etiqueta de lenguaje seleccionado */
+    width: auto;
+    
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#formDiv > div > span /* estilos bordes y color de etiqueta de lenguaje seleccionado */
+{
+    background-color: var(--pubp2-btnFormDiv-color);
+    color: var(--pubp2-text-btnFormDiv-color);
+    
+    margin: 0;
+    padding: 0;
+    
+    margin: 8px 0px 8px 0px;
+    
+    font-family: var(--pubp2-font-btnFormDiv);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 39px;
+    
+    text-align: center;
+    
+    width: 92px;
+    height: 38px;
+    
+    border: 1px solid var(--pubp2-btnFormDiv-color);
+    
+    border-top-left-radius: 127px;
+    border-bottom-left-radius: 127px;
+    
+    display: none;
+}
+
+.btnClose{ /* estilos de boton "x" para ocultar la etiqueta */
+    width: 20px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    margin: 8px 0px 8px 0px;
+    
+    font-family: var(--pubp2-font-btnFormDiv);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 39px;
+    
+    border: 1px solid var(--pubp2-btnFormDiv-color);
+    background-color: var(--pubp2-btnFormDiv-color);
+    color: var(--pubp2-text-btnFormDiv-color);
+    
+    border-top-right-radius: 127px;
+    border-bottom-right-radius: 127px;
+    
+    display: none;
+}
+
+#formBtnPubp2{ /* form boton publicar */
+    color: var(--pub-formBtn-color);
+    background-color: var(--pub-formBtn-bg-color);
+    
+    font-family: var(--pub-font-formBtn);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    
+    border: 1px solid var(--pub-formBtn-bg-color);
+    border-radius: 10px;
+    
+    height: 60px;
+    width: 433px;
+    
+    margin-top: 40px;
+}
+
+/* Formulario - end */
+
+/************** Publicacion paso 2 - end ***************/
