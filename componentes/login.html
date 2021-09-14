@@ -5,17 +5,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Nunito:ital,wght@0,700;1,700&family=PT+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>ColabOrange</title>
 </head>
 
 <body>
 
+    <nav class="navbar navbar-expand-lg navbar-light" id="navbg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
+                <img src="public/img/Logo.svg" alt="" width="54" height="54" class="d-inline-block" id="logonsb"><b
+                    class="textnsb green">Colab</b> <b class="textnsb orange">Orange</b>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row my-5 text-center">
+            <div class="saludo">
+                <h4>¡Nos alegra tenerte de vuelta!</h4>
+            </div>
+            <div class="d-grid gap-2 col-3 mx-auto my-3">
+                <button id="sin-cuenta" class="btn btn-lg py-3" type="button">No tengo cuenta aún</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-login col center">
+                <div class="mensaje-cabecera text-center my-5">
+                    <h1>Iniciar Sesión</h1>
+                </div>
+                <div class="form mx-5">
+                    <form action="#">
+                        <div class="w-full">
+                            <label for="email" class="form-label">Dirección de email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <label for="password" class="form-label mt-4">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                            <div id="link-contraseña" class="d-flex flex-row-reverse mt-2">
+                                <a href="#">Olvidé mi contraseña</a>
+                            </div>
+                            <div class="mt-5 mb-4 w-100">
+                                <button id="btn-inicio" class="btn btn-lg btn-block py-3" type="button">Iniciar
+                                    Sesión</button>
+                            </div>
+                            <div class="my-4 w-100">
+                                <button id="btn-inicio-google" class="btn logo btn-lg btn-block py-3" type="button">
+                                    <svg width="24" class="google-icon" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path class="google-icon" d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z" fill="#031D44"/>
+                                        <path class="google-icon" d="M3.15302 7.3455L6.43851 9.755C7.32752 7.554 9.48052 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C8.15902 2 4.82802 4.1685 3.15302 7.3455Z" fill="#031D44"/>
+                                        <path class="google-icon" d="M12 22.0001C14.583 22.0001 16.93 21.0116 18.7045 19.4041L15.6095 16.7851C14.5717 17.5743 13.3037 18.0011 12 18.0001C9.39897 18.0001 7.19047 16.3416 6.35847 14.0271L3.09747 16.5396C4.75247 19.7781 8.11347 22.0001 12 22.0001Z" fill="#031D44"/>
+                                        <path class="google-icon" d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z" fill="#031D44"/>
+                                    </svg> 
+                                    Iniciar con Google
+                                </button>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+            <div class="img-login col">
+                <img id="img-login" src="public/img/Group 95.png" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="py-3 my-4">
+        <div class="text-center">
+            <a class="text-decoration-none" href="#">
+                <img src="public/img/Logo.svg" alt="" class="footer-icon">
+            </a>
+            <br>
+            <a class="text-decoration-none" href="#">
+                <b class="textlog green">Colab</b> <b class="textlog orange">Orange</b>
+            </a>
+        </div>
+        <br>
+        <ul class="nav justify-content-center pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a></li>
+        </ul>
+        <p class="text-center text-white">Hecho por Orange-CMYK4 y Organizado por FEC</p>
+    </footer>
 </body>
-<script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
 
 </html>
