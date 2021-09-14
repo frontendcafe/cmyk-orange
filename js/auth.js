@@ -13,9 +13,6 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 
 // Crear un nuevo usuario
-//llamar los inputs importantes
-// const userEmail = document.querySelector("#email");
-// console.log(userEmail);
 
 function isSamePassword(password, repeatepassword, email) {
   if (password === repeatepassword) {
@@ -43,4 +40,5 @@ registrationForm.addEventListener("submit", (e) => {
   const repeatePassword = registrationForm["repeatepassword"].value;
 
   isSamePassword(userPassword, repeatePassword, userEmail);
+  console.log(userEmail, userPassword, repeatePassword);
 });
