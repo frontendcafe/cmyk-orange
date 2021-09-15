@@ -29,6 +29,11 @@ h4 {
   border-radius: 10px;
 }
 
+#btn-inicio:hover {
+  background: #38ad9c;
+  color: #ffffff;
+}
+
 .form-login {
   background: #ffffff;
   border: 1px solid #ff9d00;
@@ -94,4 +99,12 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#btn-inicio-google:hover {
+  background: #38ad9c;
+  color: #ffffff;
+}
+.logo:hover .google-icon {
+  fill: white;
 }
