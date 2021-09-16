@@ -1,4 +1,8 @@
 /************** Custom Properties ***************/
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap%22");
+
 :root {
     
     --orange-color: #FF9D00;
@@ -16,11 +20,11 @@
     --pubp2-text-btnFormDiv-color: #202020;
     
     --pub-font-title: 'Lora';
-    --pub-font-formLabel: 'Roboto';
+    --pub-font-formLabel: 'Nunito';
     --pub-font-formInput: 'Nunito';
-    --pub-font-formBtn: 'PT Sans';
+    --pub-font-formBtn: 'Nunito';
     
-    --pubp2-font-btnFormDiv: 'Ubuntu';
+    --pubp2-font-btnFormDiv: 'Nunito';
     
     /* Publicacion paso 2 - end */
 }
@@ -61,10 +65,14 @@
 }
 
 /* Imagen - start */
-#pubp2Column > img{ /* imagen lado derecho */
+.imgDesktop{ /* imagen lado derecho */
     width: 639px;
 	height: 650px;
 	object-fit: none; /* recorte de la imagen */
+}
+
+.imgMobile{
+    display: none;
 }
 /* Imagen - end */
 
@@ -150,6 +158,7 @@
     padding: 0;
     
     margin: 8px 0px 8px 0px;
+    padding-left: 10px;
     
     font-family: var(--pubp2-font-btnFormDiv);
     font-style: normal;
@@ -159,7 +168,7 @@
     
     text-align: center;
     
-    width: 92px;
+    width: 82px;
     height: 38px;
     
     border: 1px solid var(--pubp2-btnFormDiv-color);
@@ -168,6 +177,12 @@
     border-bottom-left-radius: 127px;
     
     display: none;
+    
+    z-index: 10;
+}
+
+#formDiv > div > b{
+    width: 40px;
 }
 
 .btnClose{ /* estilos de boton "x" para ocultar la etiqueta */
@@ -213,5 +228,212 @@
 }
 
 /* Formulario - end */
+
+
+/* media query MOBILE/TABLET - start */
+@media only screen and (max-width: 991px) {
+    
+    /* Icono flecha naranja - start */
+    #arrowOrange{
+        margin-top: 30px;
+        margin-left: 25px;
+        
+        width: 36px;
+        height: 36px;
+    }
+    /* Icono flecha naranja - end */
+    
+    #pubp2Title{ /* titulo: ¿Con que tecnologias se va a trabajar? */
+        font-family: var(--pub-font-title);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 243px;
+        height: 59px;
+        
+        color: var(--pub-title-color);
+    }
+    
+    #pubp2Column{ /* division en columnas Formulario / imagen */
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    /* Imagen - start */
+    .imgDesktop{
+        display: none !important;
+    }
+    
+    .imgMobile{ /* imagen lado superior */
+        width: 190px;
+        height: auto;
+        object-fit: unset;
+        
+        display: inline;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Imagen - end */
+    
+    #pubp2Column > form{ /* formulario */
+        border: 1px solid var(--white-color);
+        box-sizing: border-box;
+        border-radius: 24px;
+        
+        padding: 60px 20px 140px 20px;
+    }
+    
+    #pubp2Column > form > div > label{ /* todos los form label */
+        color: var(--black-color);
+        
+        font-family: var(--pub-font-formLabel);
+        font-weight: 600;
+        font-style: normal;
+        font-size: 14px;
+        line-height: 17px;
+        
+        margin-bottom: 8px;
+    }
+    
+    #pubp2Column > form > div > input{ /* estilos para los form input */
+        color: var(--formInput-color);
+        background-color: var(--pub-formInput-bg-color);
+        
+        font-family: var(--pub-font-formInput);
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 14px;
+        
+        padding-left: 13px;
+        
+        width: 320px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    #pubp2Column > form > div > select{ /* estilos para select */
+        color: var(--formInput-color);
+        background-color: var(--pub-formInput-bg-color);
+        
+        font-family: var(--pub-font-formInput);
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 14px;
+        
+        padding-left: 13px;
+        
+        width: 320px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    
+    #formDiv{ /* form div inicialmente en blanco que alberga los items seleccionados */
+        width: 320px;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+    
+    #formDiv > div{ /* separacion entre cada etiqueta de lenguaje seleccionado */
+        width: auto;
+        
+        margin-left: 3px !important;
+        margin-right: 3px !important;
+    }
+    
+    #formDiv > div > span /* estilos bordes y color de etiqueta de lenguaje seleccionado */
+    {
+        background-color: var(--pubp2-btnFormDiv-color);
+        color: var(--pubp2-text-btnFormDiv-color);
+        
+        margin: 0;
+        padding: 0;
+        
+        margin: 8px 0px 8px 0px;
+        padding-left: 10px;
+        
+        font-family: var(--pubp2-font-btnFormDiv);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        
+        text-align: center;
+        
+        width: 70px;
+        height: 20px;
+        
+        border: 1px solid var(--pubp2-btnFormDiv-color);
+        
+        border-top-left-radius: 127px;
+        border-bottom-left-radius: 127px;
+        
+        display: none;
+        
+        z-index: 10;
+    }
+    
+    #formDiv > div > b{
+        width: 20px;
+    }
+    
+    .btnClose{ /* estilos de boton "x" para ocultar la etiqueta */
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+        margin: 8px 0px 8px 0px;
+        
+        font-family: var(--pubp2-font-btnFormDiv);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        
+        border: 1px solid var(--pubp2-btnFormDiv-color);
+        background-color: var(--pubp2-btnFormDiv-color);
+        color: var(--pubp2-text-btnFormDiv-color);
+        
+        border-top-right-radius: 127px;
+        border-bottom-right-radius: 127px;
+        
+        display: none;
+    }
+    
+    #formBtnPubp2{ /* form boton publicar */
+        color: var(--pub-formBtn-color);
+        background-color: var(--pub-formBtn-bg-color);
+        
+        font-family: var(--pub-font-formBtn);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        
+        border: 1px solid var(--pub-formBtn-bg-color);
+        border-radius: 10px;
+        
+        height: 40px;
+        width: 320px;
+        
+        margin-top: 0 !important;
+    }
+    
+}
+/* media query MOBILE/TABLET - end */
 
 /************** Publicacion paso 2 - end ***************/
