@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap%22");
+
 :root{
   --main-color: rgba(4, 56, 93, 1);
   --text-prima: rgba(255, 157, 0, 1);
@@ -6,6 +8,7 @@
 
   --font-logo : 'DM Serif Display';
   --font-detal: 'DM Sans';
+  --font-textFooter-mobile: 'Nunito'
 }
 
 footer{
@@ -39,4 +42,96 @@ footer{
 
 .textlog.green{
     color: var(--text-secon);
+}
+
+
+/* media query MOBILE/TABLET - start */
+@media only screen and (max-width: 991px) {
+
+  footer{
+    background-color: var(--main-color);
+    font-family: var(--font-textFooter-mobile);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    
+    padding: 0 !important;
+  }
+  
+  footer > div{
+    padding-bottom: 15px !important;
+  }
+  
+  .footer-icon{ /* flecha en circulo naranja */
+    width: 49px;
+    padding-top: 3px;
+    padding-bottom: 3px !important;
+  }
+  
+  .textlog{ /* texto grupal: Colab Orange */
+    font-weight: normal;
+    font-family: var(--font-logo);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -1%;
+
+    vertical-align: middle;
+    padding: 0 !important;
+  }
+  
+  .textlog.orange{ /* Texto logo: Orange */
+    color: var(--text-prima);
+  }
+  
+  .textlog.green{ /* Texto logo: Colab */
+    color: var(--text-secon);
+  }
+  
+  /* Para links: Crea un proyecto, Buscar un proyecto, Sobre nosotros - start */
+  .textFooter{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px !important;
+  }
+  
+  .textFooter > ul{
+    justify-content: left !important;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .textFooter > ul > li > a{
+    padding: 0 !important;
+    padding-left: 20px !important;
+    padding-bottom: 13px !important;
+  }
+  /* Para links: Crea un proyecto, Buscar un proyecto, Sobre nosotros - end */
+  
+  .textFooter > p{ /* texto: Hecho por Orange-CMYK4 y Organizado por FEC */
+    text-align: right !important;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: right;
+    
+    width: 300px !important;
+    margin-bottom: auto;
+    margin-top: auto;
+    
+    margin-right: 22px;
+  }
+  
+  .hidden{ /* para ocultar elementos */
+    display: none;
+  }
+
 }

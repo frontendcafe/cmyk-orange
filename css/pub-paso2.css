@@ -1,7 +1,9 @@
 /************** Custom Properties ***************/
 
+/* Google Fonts - start */
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap%22");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap%22");
+/* Google Fonts - end */
 
 :root {
     
@@ -290,6 +292,10 @@
         border-radius: 24px;
         
         padding: 60px 20px 140px 20px;
+        
+        display: inline;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     #pubp2Column > form > div > label{ /* todos los form label */
