@@ -32,6 +32,7 @@ function isSamePassword(password, repeatepassword, email) {
   }
 }
 
+// Signup with email and password
 const registrationForm = document.querySelector("#registrationForm");
 registrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
