@@ -9,7 +9,7 @@ h1 {
   margin-top: 60px;
   margin-bottom: 40px;
   color: #125e8a;
-  max-width: 600px;
+  max-width: 340px;
   font-size: 16px;
   font-family: "Lora";
   font-style: normal;
@@ -23,5 +23,6 @@ h1 {
 @media (min-width: 768px) {
   h1 {
     font-size: 38px;
+    max-width: 600px;
   }
 }
