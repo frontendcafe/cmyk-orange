@@ -23,11 +23,12 @@
     <!-- CSS - start -->
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <!-- CSS - end -->
   </head>
   <body>
     <!-- Navbar sin botones - start -->
-    <nav class="navbar navbar-light" id="navbg">
+    <nav class="navbar navbar-light" id="navbg" style="display: none">
       <div class="container-fluid">
         <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
           <img
@@ -113,7 +114,104 @@
     </nav>
     <!-- Navbar con botones - end -->
 
-    <h1>ColabOrange conecta programadores y diseñadores con ideas.</h1>
+    <div class="container-home">
+      <h1>ColabOrange conecta programadores y diseñadores con ideas.</h1>
+      <div class="grid">
+        <button class="btnCta"><p>Empieza ya</p></button>
+        <img
+          src="public/img/Group_157.svg"
+          alt="four people to represent the app"
+          class="img-home"
+        />
+      </div>
+      <div class="h2-tag">
+        <h2>Los Tags más buscados</h2>
+        <ul id="tags-home" class="tags li-home">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
+      </div>
+      <div>
+        <div class="h3-card">
+          <h3>¡Tu diseño se vuelve real!</h3>
+          <p class="subtitle">Termina tu proyecto en menos tiempo</p>
+          <a href="componentes/publicacion.html" class="createbtn"
+            ><p>Creá un proyecto</p></a
+          >
+          <!-- Primera card de proyectos -->
+          <div class="card">
+            <div class="ttl-next">
+              <div>
+                <p id="nameDesOrDev">Martina Otero</p>
+                <h4 id="titlePrj">Diseño de página web</h4>
+              </div>
+              <a href="componentes/aplicar-proyecto.html">
+                <img
+                  src="public/img/btn-atras.svg"
+                  alt="aplicar a este proyecto"
+                />
+              </a>
+            </div>
+            <ul id="tags-project" class="tags li-project">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+            </ul>
+            <div class="card-descrip">
+              <p id="description">
+                La idea del proyecto es crear una página web orientada al
+                turismo. El proyecto tendria cinco páginas en total, incluyendo
+                la Home
+                <button id="descriptionBtn" class="moreDescrBtn">...</button>
+              </p>
+              <p class="moreDescr"></p>
+            </div>
+          </div>
+        </div>
+        <div class="h3-card">
+          <h3>Un nuevo reto para tu carrera</h3>
+          <p class="subtitle">
+            Aumenta tu experiencia profesional ayudando a otros
+          </p>
+          <a href="componentes/aplicar-proyecto.html" class="applybtn"
+            ><p>Aplica a un proyecto</p></a
+          >
+          <!-- Segunda card de proyectos -->
+          <div class="card">
+            <div class="ttl-next">
+              <div>
+                <p id="nameDesOrDev">Martina Otero</p>
+                <h4 id="titlePrj">Diseño de página web</h4>
+              </div>
+              <a href="componentes/aplicar-proyecto.html">
+                <img
+                  src="public/img/btn-atras.svg"
+                  alt="aplicar a este proyecto"
+                />
+              </a>
+            </div>
+            <ul id="tags-project" class="tags li-project">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+            </ul>
+            <div class="card-descrip">
+              <p>
+                La idea del proyecto es crear una página web orientada al
+                turismo. El proyecto tendria cinco páginas en total, incluyendo
+                la Home
+                <button id="description" class="moreDescrBtn">...</button>
+              </p>
+              <p class="moreDescr"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer - start -->
     <footer class="py-3 my-4">
