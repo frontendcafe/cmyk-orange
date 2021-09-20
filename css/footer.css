@@ -1,7 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap%22");
+/* Google Fonts - start */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap'); /* titulos */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap'); /* subtitulos y demas */
+/* Google Fonts - end */
 
 :root{
-  --main-color: rgba(4, 56, 93, 1);
+  /* --main-color: rgba(4, 56, 93, 1); */
+  --main-color: rgba(4, 57, 94, 1); /* Color de Figma */
   --text-prima: rgba(255, 157, 0, 1);
   --text-secon: rgba(65, 210, 189, 1);
   --text-detal: hsla(255, 255, 255, 1);
@@ -45,7 +49,8 @@ footer{
 }
 
 
-/* media query MOBILE/TABLET - start */
+/************** media query MOBILE/TABLET - start ***************/
+
 @media only screen and (max-width: 991px) {
 
   footer{
@@ -130,8 +135,10 @@ footer{
     margin-right: 22px;
   }
   
-  .hidden{ /* para ocultar elementos */
+  .mobileHidden{ /* para ocultar elementos */
     display: none;
   }
 
 }
+
+/************** media query MOBILE/TABLET - end ***************/
