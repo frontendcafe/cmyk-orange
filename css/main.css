@@ -75,7 +75,7 @@ h2 {
   padding: 5px 15px;
   margin: 12px 10px;
 }
-.h3-card {
+.h3andCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -150,13 +150,8 @@ a {
   text-decoration: none;
 }
 .ttl-next a {
-  background-color: transparent;
-  border: none;
-  margin: 0px;
+  margin: 22px 42px 22px 0px;
   padding: 0px;
-}
-.ttl-next a img {
-  margin-right: 40px;
 }
 .li-project {
   margin: 10px 15px 20px 15px;
@@ -176,11 +171,6 @@ a {
   padding: 5px 15px;
   margin-bottom: 5px;
 }
-.card-descrip {
-  display: flex;
-  flex-flow: row wrap;
-  order: 3;
-}
 .card-descrip p {
   font-size: 14px;
   line-height: 14px;
@@ -188,13 +178,26 @@ a {
   text-align: justify;
   font-weight: 400;
   margin: 5px 20px 0px 20px;
+  order: 3;
 }
-.moreDescrBtn {
-  background-color: transparent;
-  border: none;
-  font-size: 20px;
-  padding: 0px;
-  margin: 0px;
+.card-descrip-more {
+  display: none;
+}
+.applProj {
+  display: none;
+}
+h6 {
+  color: #125e8a;
+  font-size: 16px;
+  font-family: "Lora";
+  font-weight: 700;
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+.applProj img {
+  width: 16px;
+  height: 16px;
+  margin-left: 12px;
 }
 .applybtn {
   width: 160px;
@@ -211,6 +214,10 @@ a {
   padding: 8px 10px;
   color: black;
   font-weight: 700;
+}
+.img-designer,
+.img-PM {
+  display: none;
 }
 @media (min-width: 768px) {
   h1 {
@@ -249,16 +256,119 @@ a {
     height: auto;
     text-align: center;
     padding: 5px 15px;
-    margin: 0px 25px;
+    margin: 0px 0px 10px 25px;
+  }
+  .card {
+    width: 100%;
+    max-width: 500px;
+    height: max-content;
+    box-shadow: none;
   }
   h2 {
     font-size: 36px;
-    margin-top: 93px;
     margin-bottom: 46px;
   }
   h3 {
-    margin-top: 131px;
+    margin-top: 0px;
     margin-bottom: 27px;
     font-size: 34px;
+  }
+  .subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 27px;
+  }
+  .createbtn {
+    width: 100%;
+    max-width: 294px;
+    border-radius: 15px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    text-align: center;
+    order: 6;
+  }
+  .createbtn p {
+    font-size: 18px;
+    margin: 0px;
+    padding: 12px 0px;
+  }
+  .applybtn {
+    width: 100%;
+    max-width: 294px;
+    border-radius: 15px;
+    margin-top: 60px;
+    margin-bottom: 0px;
+    order: 6;
+  }
+  .applybtn p {
+    font-size: 18px;
+    margin: 0px;
+    padding: 12px 0px;
+  }
+  .columnH3-img {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+  }
+  .h3andCard {
+    width: 50%;
+  }
+  .h3NCardNImgDes {
+    order: 2;
+    margin-right: 15px;
+  }
+  .img-designer {
+    order: 1;
+  }
+  .h3NCardNImgPM {
+    margin-left: 15px;
+  }
+  .img-designer,
+  .img-PM {
+    display: block;
+    width: 50%;
+    max-width: 550px;
+  }
+  .li-project {
+    order: 3;
+    margin: 10px 50px 20px 50px;
+  }
+  .card-descrip {
+    order: 4;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .card-descrip p {
+    font-size: 18px;
+  }
+  .card-descrip-more {
+    display: block;
+  }
+  .ttl-next a {
+    display: none;
+  }
+  .ttl-next p {
+    font-size: 16px;
+    margin-top: 40px;
+    margin-left: 50px;
+  }
+  h4 {
+    font-size: 24px;
+    margin-left: 50px;
+  }
+  .applProj {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 50px 50px 0px;
+    align-self: end;
+    order: 5;
   }
 }
