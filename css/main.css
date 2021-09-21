@@ -27,7 +27,12 @@ h1 {
   height: 36px;
   border: none;
   background-color: #41d3bd;
+  color: #031d44;
   border-radius: 12px;
+}
+.btnCta:hover {
+  background-color: #38ad9c;
+  color: white;
 }
 .btnCta p {
   font-family: "Nunito";
@@ -104,16 +109,20 @@ h3 {
   width: 160px;
   border: none;
   background-color: #41d3bd;
+  color: #031d44;
   border-radius: 12px;
   margin-bottom: 31px;
   text-align: center;
+}
+.createbtn:hover {
+  background-color: #38ad9c;
+  color: white;
 }
 .createbtn p {
   font-family: "Nunito";
   font-size: 14px;
   margin: 0px;
   padding: 8px 10px;
-  color: black;
   font-weight: 700;
 }
 .card {
@@ -148,6 +157,7 @@ h4 {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 .ttl-next a {
   margin: 22px 42px 22px 0px;
@@ -206,13 +216,18 @@ h6 {
   border-radius: 12px;
   margin-bottom: 31px;
   text-align: center;
+  color: #031d44;
+}
+.applybtn:hover {
+  background-color: #38ad9c;
+  color: white;
 }
 .applybtn p {
   font-family: "Nunito";
   font-size: 14px;
   margin: 0px;
   padding: 8px 10px;
-  color: black;
+
   font-weight: 700;
 }
 .img-designer,
@@ -370,5 +385,10 @@ h6 {
     margin: 20px 50px 50px 0px;
     align-self: end;
     order: 5;
+    text-decoration: underline;
+    color: #125e8a;
+  }
+  .applProj:hover {
+    text-decoration: none;
   }
 }
