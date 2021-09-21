@@ -17,13 +17,13 @@ const signInForm = document.querySelector("#signInForm");
 
 signInForm.addEventListener("submit", (e) => {
   e.preventDefault();
-
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
   console.log(email, password);
   auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
     signInForm.reset();
     console.log("sign in");
+    window.location.assign(`/index.html`);
   });
 });
 
@@ -37,8 +37,18 @@ googleButton.addEventListener("click", (e) => {
     .then((result) => {
       signInForm.reset();
       console.log("google sign in");
+      window.location.assign(`/index.html`);
     })
     .catch((err) => {
       console.log(err);
     });
+});
+
+// Botón no tengo cuenta aún
+const sinCuenta = document.querySelector("#sin-cuenta");
+
+sinCuenta.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("No tengo cuenta aún");
+  window.location.assign(`componentes/registroPaso1.html`);
 });
