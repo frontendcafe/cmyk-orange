@@ -108,3 +108,9 @@ h4 {
 .logo:hover .google-icon {
   fill: white;
 }
+
+#sin-cuenta:hover {
+  background: #38ad9c;
+  border-radius: 15px;
+  color: #ffffff;
+}
