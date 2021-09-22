@@ -21,6 +21,10 @@
 }
 /************** Custom Properties ***************/
 /************** Version Mobile - start ****************/
+#goBack {
+  background-color: transparent;
+  border: none;
+}
 .arrowOrange {
   width: 36px;
   margin-top: 30px;
