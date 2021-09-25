@@ -59,12 +59,12 @@
           </h1>
           <button class="btn-principal">Ya estoy registrado</button>
         </div>
-        <div class="form-img">
+        <div id="form-img" class="form-img">
           <div class="form-principal my-5">
             <h2 class="form-title text-center">Registro</h2>
             <div class="mb-5 mt-4">
-              <form id="registrationForm" class="regisform">
-                <label for="nombre" class="form-label">Nombre y Apellido</label>
+              <form id="registrationForm">
+                <label for="nombre">Nombre y Apellido</label>
                 <input
                   required
                   type="text"
@@ -72,7 +72,7 @@
                   class="form-control"
                   placeholder="Nombre y Apellido"
                 />
-                <label for="email" class="form-label">Dirección de email</label>
+                <label for="email">Dirección de email</label>
                 <input
                   id="email"
                   type="email"
@@ -80,7 +80,7 @@
                   placeholder="E-mail"
                   required
                 />
-                <label for="password" class="form-label">Contraseña</label>
+                <label for="password">Contraseña</label>
                 <input
                   id="password"
                   type="password"
@@ -89,9 +89,7 @@
                   maxlength="12"
                   required
                 />
-                <label for="repeatepassword" class="form-label"
-                  >Repetir contraseña</label
-                >
+                <label for="repeatepassword">Repetir contraseña</label>
                 <input
                   id="repeatepassword"
                   type="password"
@@ -154,14 +152,12 @@
               </form>
             </div>
           </div>
-          <div class="img-login col">
-            <img
-              id="img-login"
-              src="../public/img/logoRegistro1.svg"
-              alt="dos personas trabajando en un proyecto"
-              class="imgRegistro1"
-            />
-          </div>
+          <img
+            id="img-login"
+            src="../public/img/logoRegistro1.svg"
+            alt="dos personas trabajando en un proyecto"
+            class="imgRegistro1"
+          />
         </div>
       </div>
       <!-- Registro paso 1 - end -->
