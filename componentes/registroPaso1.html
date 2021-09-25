@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Registro-paso1</title>
+    <title>RegistroPaso1</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -30,37 +30,41 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
           <img
-            src="../public/img/Logo.svg"
+            src="../public/img/Logo(2).svg"
             alt=""
-            width="54"
+            width="213"
             height="54"
             class="d-inline-block"
             id="logonsb"
-          /><b class="textnsb green">Colab</b>
-          <b class="textnsb orange">Orange</b>
+          />
         </a>
       </div>
     </nav>
     <!-- Navbar sin botones - end -->
 
     <!-- Registro paso 1 - start -->
-    <div class="container">
-      <div class="titulo">
-        <h1 class="title--principal">
-          ¡Te damos la bienvenida a la <br />
-          comunidad!
-        </h1>
-        <button class="btn-principal" type="button">Ya estoy registrado</button>
-      </div>
-      <div class="row align-items-center">
-        <div class="form--login__principal col center my-5">
-          <div class="form--login__title text-center my-4">
-            <h2>Registro</h2>
-          </div>
-          <div class="form mx-3 my-5">
-            <form id="registrationForm">
-              <div class="w-full">
-                <label for="nombre" class="form-label">Nombre y Apellido</label>
+    <div>
+      <button id="goBack" onClick="goBack()" class="btnGoBack">
+        <img
+          src="../public/img/Vector.svg"
+          alt="boton para ir atras"
+          id="arrowOrange"
+          class="arrowOrange"
+        />
+      </button>
+      <div class="ttl-form-img">
+        <div class="titulo">
+          <h1 class="title-principal">
+            ¡Te damos la bienvenida a la comunidad!
+          </h1>
+          <button class="btn-principal">Ya estoy registrado</button>
+        </div>
+        <div id="form-img" class="form-img">
+          <div class="form-principal">
+            <h2 class="form-title text-center">Registro</h2>
+            <div class="mb-5 mt-4">
+              <form id="registrationForm">
+                <label for="nombre">Nombre y Apellido</label>
                 <input
                   required
                   type="text"
@@ -68,7 +72,7 @@
                   class="form-control"
                   placeholder="Nombre y Apellido"
                 />
-                <label for="email" class="form-label">Dirección de email</label>
+                <label for="email">Dirección de email</label>
                 <input
                   id="email"
                   type="email"
@@ -76,7 +80,7 @@
                   placeholder="E-mail"
                   required
                 />
-                <label for="password" class="form-label">Contraseña</label>
+                <label for="password">Contraseña</label>
                 <input
                   id="password"
                   type="password"
@@ -85,9 +89,7 @@
                   maxlength="12"
                   required
                 />
-                <label for="repeatepassword" class="form-label"
-                  >Repetir contraseña</label
-                >
+                <label for="repeatepassword">Repetir contraseña</label>
                 <input
                   id="repeatepassword"
                   type="password"
@@ -96,57 +98,66 @@
                   minlength="6"
                   maxlength="12"
                 />
-              </div>
-              <div class="mt-5 mb-2 w-100">
-                <button
-                  class="btn btn-lg btn--form btn-block py-2"
-                  type="submit"
-                >
-                  Registrarme
-                </button>
-              </div>
-              <div class="my-4 w-100">
-                <button
-                  class="btn btn-lg googlelogo btn--form__google btn-block py-2"
-                  type="button"
-                >
-                  <svg
-                    width="24"
-                    class="google-icon"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div class="mt-5 mb-2 w-100">
+                  <button
+                    class="btn btn-lg btn--form btn-block py-2"
+                    type="submit"
                   >
-                    <path
+                    Registrarme
+                  </button>
+                </div>
+                <div class="my-4 w-100">
+                  <button
+                    class="
+                      btn btn-lg
+                      googlelogo
+                      btn--form__google
+                      btn-block
+                      py-2
+                    "
+                    type="button"
+                  >
+                    <svg
+                      width="24"
                       class="google-icon"
-                      d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
-                      fill="#031D44"
-                    />
-                    <path
-                      class="google-icon"
-                      d="M3.15302 7.3455L6.43851 9.755C7.32752 7.554 9.48052 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C8.15902 2 4.82802 4.1685 3.15302 7.3455Z"
-                      fill="#031D44"
-                    />
-                    <path
-                      class="google-icon"
-                      d="M12 22.0001C14.583 22.0001 16.93 21.0116 18.7045 19.4041L15.6095 16.7851C14.5717 17.5743 13.3037 18.0011 12 18.0001C9.39897 18.0001 7.19047 16.3416 6.35847 14.0271L3.09747 16.5396C4.75247 19.7781 8.11347 22.0001 12 22.0001Z"
-                      fill="#031D44"
-                    />
-                    <path
-                      class="google-icon"
-                      d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
-                      fill="#031D44"
-                    />
-                  </svg>
-                  Registrarme con Google
-                </button>
-              </div>
-            </form>
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        class="google-icon"
+                        d="M21.8055 10.0415H21V10H12V14H17.6515C16.827 16.3285 14.6115 18 12 18C8.6865 18 6 15.3135 6 12C6 8.6865 8.6865 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C6.4775 2 2 6.4775 2 12C2 17.5225 6.4775 22 12 22C17.5225 22 22 17.5225 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+                        fill="#031D44"
+                      />
+                      <path
+                        class="google-icon"
+                        d="M3.15302 7.3455L6.43851 9.755C7.32752 7.554 9.48052 6 12 6C13.5295 6 14.921 6.577 15.9805 7.5195L18.809 4.691C17.023 3.0265 14.634 2 12 2C8.15902 2 4.82802 4.1685 3.15302 7.3455Z"
+                        fill="#031D44"
+                      />
+                      <path
+                        class="google-icon"
+                        d="M12 22.0001C14.583 22.0001 16.93 21.0116 18.7045 19.4041L15.6095 16.7851C14.5717 17.5743 13.3037 18.0011 12 18.0001C9.39897 18.0001 7.19047 16.3416 6.35847 14.0271L3.09747 16.5396C4.75247 19.7781 8.11347 22.0001 12 22.0001Z"
+                        fill="#031D44"
+                      />
+                      <path
+                        class="google-icon"
+                        d="M21.8055 10.0415H21V10H12V14H17.6515C17.2571 15.1082 16.5467 16.0766 15.608 16.7855L15.6095 16.7845L18.7045 19.4035C18.4855 19.6025 22 17 22 12C22 11.3295 21.931 10.675 21.8055 10.0415Z"
+                        fill="#031D44"
+                      />
+                    </svg>
+                    Registrarme con Google
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
-        <div class="img-login col">
-          <img id="img-login" src="../public/img/logoRegistro1.svg" alt="" />
+          <img
+            id="img-login"
+            src="../public/img/logoRegistro1.svg"
+            alt="dos personas trabajando en un proyecto"
+            class="imgRegistro1"
+          />
         </div>
       </div>
       <!-- Registro paso 1 - end -->
@@ -185,7 +196,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="../js/main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
 /************** Custom Properties ***************/
 :root {
   --orange-color: #ff9d00;
@@ -9,51 +10,94 @@
   --hover-color: #38ad9c;
   --font-title: "Lora";
 }
-
-/************** Registro paso 1 - start ***************/
-
+/************** Version Mobile - start ****************/
+.btnGoBack {
+  background-color: transparent;
+  border: none;
+}
+.arrowOrange {
+  width: 36px;
+  margin-top: 32px;
+  margin-left: 20px;
+}
 .titulo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.title--principal {
+.title-principal {
   color: var(--title-color);
   font-family: var(--font-title);
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
-  margin-top: 67px;
+  margin-top: 30px;
 }
 .btn-principal {
   background-color: rgba(65, 211, 189, 1);
   border: none;
+  border-radius: 12px;
   text-align: center;
-  font-family: Nunito;
-  font-style: normal;
+  font-family: "Nunito";
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 20px;
   color: var(--font-color);
+  padding: 8px 0px;
+  margin-top: 12px;
+  width: 150px;
+  height: 36px;
+}
+.ttl-form-img {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 9px 15px;
-  width: 220px;
-  height: 51px;
-  border-radius: 15px;
+  width: 100%;
+}
+.form-img {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 320px;
+}
+.form-title {
+  font-family: "Lora";
+  color: #125e8a;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+#registrationForm > label {
+  font-family: "Nunito";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 20px;
+}
+#registrationForm > input {
+  background-color: #ffe7ba;
+  border: none;
+  border-radius: 8px;
+}
+#form-img > img {
+  display: none;
 }
 .btn--form {
   background-color: rgba(65, 211, 189, 1);
   width: 100%;
-  font-family: Nunito;
+  font-family: "Nunito";
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 18px;
   color: #031d44;
   border-radius: 10px;
 }
@@ -61,52 +105,101 @@
   width: 100%;
   background: #ffffff;
   border: 1px solid rgba(65, 211, 189, 1);
-  box-sizing: border-box;
   border-radius: 10px;
   font-family: "Nunito";
-  font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 18px;
   color: #031d44;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
-.placeholder {
-  color: #696871;
-}
-.form-control {
-  background-color: rgba(255, 231, 186, 1);
-}
+/************** Version Mobile -end ****************/
 
-/* Imagen - end */
-
-/* Columna izquierda - start */
-.form--login__principal {
-  margin-left: 50px;
-  border: 1px solid var(--orange-color);
-  background: var(--white-color);
-  box-sizing: border-box;
-  border-radius: 24px;
-}
-.form--login__title {
-  font-family: Lora;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 46.08px;
-  color: var(--regp1-title-color);
-}
-.google-icon {
-  margin-right: 5px;
-}
-.btn--form__google:hover,
-.btn--form:hover,
-.btn-principal:hover {
-  color: white;
-  background-color: var(--hover-color);
-}
-.googlelogo:hover .google-icon {
-  fill: white;
+/************** version Desktop - start ***************/
+@media (min-width: 768px) {
+  .arrowOrange {
+    width: 48px;
+    margin-top: 54px;
+    margin-left: 70px;
+  }
+  .title-principal {
+    width: 100%;
+    max-width: 600px;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    margin: 0px;
+  }
+  .btn-principal {
+    font-size: 18px;
+    padding: 9px 15px;
+    width: 220px;
+    height: 51px;
+    border-radius: 15px;
+    margin-top: 30px;
+  }
+  .btn--form {
+    width: 100%;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .btn--form__google {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .placeholder {
+    color: #696871;
+  }
+  #registrationForm > input {
+    background-color: rgba(255, 231, 186, 1);
+  }
+  #form-img > img {
+    display: block;
+    width: 50%;
+    max-width: 550px;
+  }
+  .form-img {
+    flex-direction: row;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+  .form-principal {
+    margin-left: 50px;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 50px;
+    border: 1px solid var(--orange-color);
+    background: var(--white-color);
+    box-sizing: border-box;
+    border-radius: 24px;
+  }
+  #registrationForm > label {
+    font-size: 24px;
+  }
+  #registrationForm > input {
+    font-size: 18px;
+    height: 50px;
+    border-radius: 8px;
+  }
+  .form-title {
+    font-size: 36px;
+    line-height: 46.08px;
+  }
+  .google-icon {
+    margin-right: 5px;
+  }
+  .btn--form__google:hover,
+  .btn--form:hover,
+  .btn-principal:hover {
+    color: white;
+    background-color: var(--hover-color);
+  }
+  .googlelogo:hover .google-icon {
+    fill: white;
+  }
 }
