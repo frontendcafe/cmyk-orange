@@ -39,7 +39,14 @@ registrationForm.addEventListener("submit", (e) => {
   const userEmail = registrationForm["email"].value;
   const userPassword = registrationForm["password"].value;
   const repeatePassword = registrationForm["repeatepassword"].value;
-
-  isSamePassword(userPassword, repeatePassword, userEmail);
-  console.log(userEmail, userPassword, repeatePassword);
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      alert("ya estas tenés la cuenta creada");
+      console.log("user is sign in");
+      window.location.assign(`../index.html`);
+    } else {
+      isSamePassword(userPassword, repeatePassword, userEmail);
+      console.log("No user is sign in");
+    }
+  });
 });
