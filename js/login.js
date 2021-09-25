@@ -52,3 +52,11 @@ sinCuenta.addEventListener("click", (e) => {
   console.log("No tengo cuenta aún");
   window.location.assign(`componentes/registroPaso1.html`);
 });
+
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    console.log("user is sign in");
+  } else {
+    console.log("No user is sign in");
+  }
+});
