@@ -170,6 +170,7 @@
   }
   .form-principal {
     margin-left: 50px;
+    width: 100%;
     max-width: 500px;
     padding: 40px 50px;
     border: 1px solid var(--orange-color);
