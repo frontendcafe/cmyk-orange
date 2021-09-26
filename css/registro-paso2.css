@@ -1,116 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 /************** Custom Properties ***************/
 :root {
-    
-    --orange-color: #FF9D00;
-    
-    /* Registro paso 2 - start */
-    --white-color: #FFFFFF;
-    --black-color: #000000;
-    --textarea-color: #9EA8BD;
-    
-    --regp2-textarea-bg-color: #FFE7BA;  
-    --regp2-title-color: #125E8A;
-    
-    --regp2-font-title: 'Lora';
-    --regp2-font-textarea: 'Roboto';
-    
-    /* Registro paso 2 - end */
+  --orange-color: #ff9d00;
+
+  /* Registro paso 2 - start */
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --textarea-color: #9ea8bd;
+
+  --regp2-textarea-bg-color: #ffe7ba;
+  --regp2-title-color: #125e8a;
+
+  --regp2-font-title: "Lora";
+  --regp2-font-textarea: "Roboto";
+
+  /* Registro paso 2 - end */
 }
 /************** Custom Properties ***************/
 
+/************** Registro paso 2 version mobile - start ***************/
+.container {
+  padding: 0px;
+}
+.btnGoBack {
+  background-color: transparent;
+  border: none;
+}
+.arrowOrange {
+  width: 36px;
+  margin: 32px 0px 0px 0px;
+}
+h1,
+h2,
+h3 {
+  color: var(--regp2-title-color);
+  font-family: var(--regp2-font-title);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 35px;
+}
+.ttl-uploadPhoto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.uploadPhoto {
+  width: 100%;
+  max-width: 150px;
+}
+.uploadPhoto::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.uploadPhoto::before {
+  width: 148px;
+  height: 148px;
+  content: "";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  background-color: #41d3bd;
+  border: none;
+  border-radius: 100px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: normal;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+.file-custom {
+  position: absolute;
+  right: 59px;
+  bottom: 86px;
+}
+.ttl-photo {
+  position: relative;
+}
+#ttl-uploadPhoto > textarea {
+  width: 100%;
+  max-width: 320px;
+  height: 176px;
+  background-color: #ffe7ba;
+  border: none;
+  border-radius: 8px;
+  font-family: "Nunito";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+#regp2Column > img {
+  display: none;
+}
 
-/************** Registro paso 2 - start ***************/
+/************** Registro paso 2 version mobile - end ****************/
 
-#regp2Title{ /* titulo: Solo queda un paso mas */
-    color: var(--regp2-title-color);
-    
-    font-family: var(--regp2-font-title);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
+/************** Registro paso 2 version Desktop - start ****************/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 36px;
+    width: 100%;
+    max-width: 313px;
+    margin: 32px 0px;
+  }
+  h1,
+  h2 {
+    /* titulo: Solo queda un paso mas */
+
     line-height: 56px;
     text-align: center;
-    
-    margin-top: 67px;
-}
-
-#regp2Column{ /* division en columnas Columna izquierda / imagen lado derecho */
+    margin-top: 0px;
+  }
+  #regp2Column {
+    /* division en columnas Columna izquierda / imagen lado derecho */
     display: flex;
     justify-content: center;
-    
-    margin-top: 117px; /* distancia entre Titulo y Columna izquierda */
+    margin-top: 48px; /* distancia entre Titulo y Columna izquierda */
     margin-bottom: 108px;
-}
+  }
 
-/* Imagen - start */
-#regp2Column > img{ /* imagen lado derecho */
-    width: 639px;
-	height: 730px;
-	object-fit: none; /* recorte de la imagen */
-	
-	margin-top: 35px;
-}
-/* Imagen - end */
-
-/* Columna izquierda - start */
-#regp2Column > div{ /* izquierda */
-    display: flex;
-    flex-direction: column;
-    
-    width: 504px;
-
-	border: 1px solid var(--orange-color);
-    box-sizing: border-box;
-    border-radius: 24px;
-    
-    padding-top: 26px;
-}
-
-#regp2Column > div > h1{ /* titulos: Agrega tu foto / Contanos un poco acerca de vos */
-    color: var(--regp2-title-color);
-
-    font-family: var(--regp2-font-title);
-    font-style: normal;
-    font-weight: bold;
-    font-size: 48px;
-    line-height: 61px;
-    
-    text-align: center;
-    
-    margin-bottom: 0px;
-}
-
-#regp2Column > div > img{ /* Circulo verde */
+  /* Imagen - start */
+  #regp2Column > img {
+    /* imagen lado derecho */
     display: block;
-    
-    margin: 27px auto 10px auto;
-    
+    width: 50%;
+    max-width: 550px;
+  }
+  /* Imagen - end */
+  .uploadPhoto {
+    width: 100%;
+    max-width: 188px;
+  }
+  .uploadPhoto::before {
     width: 187px;
     height: 185px;
-}
-
-#textarea{ /* textarea */
-    resize: none;
-    
-    color: var(--textarea-color);
-    background-color: var(--regp2-textarea-bg-color);
-    
-    font-family: var(--regp2-font-textarea);
-    font-weight: normal;
-    font-style: normal;
-    font-size: 18px;
-    line-height: 21px;
-    
-    padding-top: 20px;
-    padding-left: 20px;
-    
-    margin: 28px 36px 35px 29px;
-    
-    width: 439px;
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    background-color: #41d3bd;
+    border: none;
+    border-radius: 100px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: pre-wrap;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+  }
+  .file-custom {
+    position: absolute;
+    right: 130px;
+    bottom: 100px;
+  }
+  #ttl-uploadPhoto > textarea {
+    max-width: 440px;
     height: 274px;
-    border-radius: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  /* Columna izquierda - start */
+  #regp2Column > div {
+    /* izquierda */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--orange-color);
+    box-sizing: border-box;
+    border-radius: 24px;
+    padding-top: 26px;
+  }
+
+  /* Columna izquierda - end */
 }
 
-/* Columna izquierda - end */
-
-/************** Registro paso 2 - end ***************/
+/************** Registro paso 2 version Desktop - end ****************/
