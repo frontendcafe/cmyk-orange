@@ -20,11 +20,16 @@ signInForm.addEventListener("submit", (e) => {
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
   console.log(email, password);
-  auth.signInWithEmailAndPassword(email, password).then((userCredential) => {
-    signInForm.reset();
-    console.log("sign in");
-    window.location.assign(`/index.html`);
-  });
+  auth
+    .signInWithEmailAndPassword(email, password)
+    .then((userCredential) => {
+      signInForm.reset();
+      console.log("sign in");
+      window.location.assign(`/index.html`);
+    })
+    .catch((e) => {
+      alert("Necesitas estar registrado para inciar sesión");
+    });
 });
 
 //Google Login
