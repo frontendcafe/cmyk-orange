@@ -68,3 +68,12 @@ applyProject.addEventListener("click", (e) => {
     }
   });
 });
+
+//
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    console.log("usuario activo");
+  } else {
+    console.log("usuario inactivo");
+  }
+});
