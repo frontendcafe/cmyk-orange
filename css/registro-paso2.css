@@ -29,7 +29,7 @@
 }
 .arrowOrange {
   width: 36px;
-  margin: 32px 0px 0px 0px;
+  margin: 32px 0px 0px 20px;
 }
 h1,
 h2,
@@ -87,6 +87,8 @@ h3 {
 #ttl-uploadPhoto > textarea {
   width: 100%;
   max-width: 320px;
+  margin: 0px 10px;
+  padding: 15px;
   height: 176px;
   background-color: #ffe7ba;
   border: none;
@@ -102,11 +104,27 @@ h3 {
 #regp2Column > img {
   display: none;
 }
-
+.submitBtn {
+  width: 100%;
+  max-width: 320px;
+  background-color: #41d3bd;
+  border: none;
+  font-size: 14px;
+  font-family: "Nunito";
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 15px;
+  margin-bottom: 100px;
+}
 /************** Registro paso 2 version mobile - end ****************/
 
 /************** Registro paso 2 version Desktop - start ****************/
 @media (min-width: 768px) {
+  .arrowOrange {
+    width: 48px;
+    margin: 54px 0px 0px 0px;
+  }
   h1 {
     font-size: 38px;
   }
@@ -137,7 +155,8 @@ h3 {
     /* imagen lado derecho */
     display: block;
     width: 50%;
-    max-width: 550px;
+    max-width: 500px;
+    margin: 0px 0px 0px 20px;
   }
   /* Imagen - end */
   .uploadPhoto {
@@ -169,6 +188,7 @@ h3 {
     bottom: 100px;
   }
   #ttl-uploadPhoto > textarea {
+    margin: 0px 10px;
     max-width: 440px;
     height: 274px;
     font-size: 16px;
@@ -187,7 +207,12 @@ h3 {
     border-radius: 24px;
     padding-top: 26px;
   }
-
+  .submitBtn {
+    padding: 15px;
+    font-size: 18px;
+    max-width: 440px;
+    margin-bottom: 25px;
+  }
   /* Columna izquierda - end */
 }
 
