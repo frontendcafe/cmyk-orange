@@ -29,7 +29,8 @@
 }
 .arrowOrange {
   width: 36px;
-  margin: 32px 0px 0px 20px;
+  margin-top: 32px;
+  margin-left: 20px;
 }
 h1,
 h2,
@@ -117,13 +118,18 @@ h3 {
   margin: 15px;
   margin-bottom: 100px;
 }
+.submitBtn:hover {
+  color: white;
+  background-color: #38ad9c;
+}
 /************** Registro paso 2 version mobile - end ****************/
 
 /************** Registro paso 2 version Desktop - start ****************/
 @media (min-width: 768px) {
   .arrowOrange {
     width: 48px;
-    margin: 54px 0px 0px 0px;
+    margin-top: 54px;
+    margin-left: 70px;
   }
   h1 {
     font-size: 38px;
