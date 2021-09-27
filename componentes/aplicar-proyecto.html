@@ -97,7 +97,7 @@
       </div>
     </nav>
     <!-- Navbar con botones - end -->
-    <button id="goBack" href="index.html">
+    <button id="goBack" onClick="goBack()" href="index.html">
       <img
         src="../public/img/Vector.svg"
         alt="boton para ir atras"
@@ -196,5 +196,10 @@
       </p>
     </footer>
     <!-- Footer - end -->
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
   </body>
 </html>
