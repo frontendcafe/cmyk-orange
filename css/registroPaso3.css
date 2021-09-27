@@ -188,6 +188,10 @@ ul {
     font-size: 20px;
     line-height: 26px;
   }
+  .btn--form:hover {
+    color: white;
+    background-color: #38ad9c;
+  }
   .placeholder {
     color: #696871;
   }
