@@ -30,14 +30,13 @@
       <div class="container-fluid">
         <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
           <img
-            src="../public/img/Logo.svg"
+            src="../public/img/Logo(2).svg"
             alt=""
-            width="54"
+            width="213"
             height="54"
             class="d-inline-block"
             id="logonsb"
-          /><b class="textnsb green">Colab</b>
-          <b class="textnsb orange">Orange</b>
+          />
         </a>
       </div>
     </nav>
@@ -45,7 +44,7 @@
 
     <!-- Registro paso 1 - start -->
 
-    <div class="container">
+    <div class="container1">
       <button id="goBack" onClick="goBack()" class="btnGoBack">
         <img
           src="../public/img/Vector.svg"
@@ -54,10 +53,10 @@
           class="arrowOrange"
         />
       </button>
-      <h1 class="title--principal">Casí listo tu perfíl en Colab orange</h1>
+      <h1 class="title--principal">Casi listo tu perfíl en Colab Orange</h1>
 
       <!-- formulario e imagen principal -->
-      <div class="form mx-3 my-4">
+      <div class="form mx-3 my-4 form-img" id="form-img">
         <form action="#">
           <div class="">
             <label for="redes" class="form-label">Redes Sociales</label>
@@ -72,23 +71,25 @@
               placeholder="https://www.ejemplo.com/"
             />
           </div>
-          <div class="">
+
+          <div class="label-select mt-5">
             <label for="tags" class="form-label">Tu Stack</label>
-            <select name="tags" class="select">
+            <select name="tags" class="select" id="select">
               <option selected>Selecciona tus stack</option>
-              <option value="diseño">Diseño</option>
-              <option value="desarrollo">Desarrollo</option>
+              <option value="Diseño">Diseño</option>
+              <option value="Desarrollo">Desarrollo</option>
               <option value="HTML">HTML</option>
-              <option value="css">CSS</option>
-              <option value="xd">Xd</option>
-              <option value="ux">UX</option>
-              <option value="ui">UI</option>
-              <option value="figma">Figma</option>
-              <option value="javascript">JavaScript</option>
-              <option value="react">React</option>
-              <option value="next">Next</option>
+              <option value="CSS">CSS</option>
+              <option value="Xd">Xd</option>
+              <option value="UX">UX</option>
+              <option value="UI">UI</option>
+              <option value="Figma">Figma</option>
+              <option value="JavaScript">JavaScript</option>
+              <option value="React">React</option>
+              <option value="Next">Next</option>
             </select>
           </div>
+          <ul id="tags"></ul>
           <button
             class="mt-5 btn btn-lg btn--form btn-block py-2"
             type="submit"
@@ -96,7 +97,11 @@
             Registrarme
           </button>
         </form>
-        <img id="img-login" src="../public/img/image3.svg" alt="" />
+        <img
+          src="../public/img/image3.svg"
+          alt="chique emocionado por estar en el último paso para su perfil"
+          class="img-login"
+        />
       </div>
       <!-- formulario e imagen principal -->
     </div>
@@ -131,7 +136,7 @@
     </footer>
     <!-- Footer - end -->
 
-    <script src="js/main.js"></script>
+    <script src="../js/registro-paso3.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"

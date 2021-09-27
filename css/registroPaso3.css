@@ -1,6 +1,6 @@
 /************** Custom Properties ***************/
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 :root {
   --orange-color: #ff9d00;
   --white-color: #ffffff;
@@ -9,7 +9,7 @@
   --font-title: "Lora";
 }
 /************** Version Mobile - start ****************/
-.container {
+.container1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,6 +38,107 @@
   text-align: center;
   margin-top: 35px;
 }
+.form-img {
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#form-img > form {
+  width: 300px;
+  order: 2;
+}
+#form-img > form > div > label {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17.5px;
+  color: black;
+  margin-bottom: 8px;
+}
+#form-img > form > div > input {
+  border: none;
+  border-radius: 10px;
+  background-color: #ffe7ba;
+  font-size: 14px;
+  height: 40px;
+}
+.label-select {
+  display: flex;
+  flex-direction: column;
+}
+.select {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffe7ba;
+  font-size: 14px;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='orange' height='34' viewBox='0 0 24 24' width='34' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 2px;
+  margin-right: 2rem;
+  padding: 1rem;
+  padding-right: 2rem;
+}
+.img-login {
+  order: 1;
+  width: 100%;
+  max-width: 155px;
+}
+.btn--form {
+  background-color: rgba(65, 211, 189, 1);
+  width: 100%;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #031d44;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.btnX {
+  font-family: "Nunito";
+  font-weight: 700;
+  background-color: transparent;
+  border: none;
+  padding: 0px 0px 0px 5px;
+}
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 110px;
+  font-family: "Nunito";
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #ffd5a6;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  margin: 5px;
+}
 /************** Version Mobile -end ****************/
 
 /************** version Desktop - start ***************/
@@ -47,32 +148,34 @@
     background-color: transparent;
     border: none;
     align-self: flex-start;
-    margin: 0px;
+    margin: 54px 0px 0px 70px;
+  }
+  .select {
+    margin: 0px 0px 20px 0px;
   }
   .arrowOrange {
     width: 48px;
-    margin-top: 32px;
-    margin-left: 0px;
+    margin: 0px;
   }
-  select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background: transparent;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='orange' height='34' viewBox='0 0 24 24' width='34' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
-    background-repeat: no-repeat;
-    background-position-x: 100%;
-    background-position-y: 10px;
-    border: 1px solid #dfdfdf;
-    border-radius: 2px;
-    margin-right: 2rem;
-    padding: 1rem;
-    padding-right: 2rem;
+  .form-img {
+    width: 100%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: row;
   }
-  .select {
-    border: none;
-    border-radius: 10px;
-    background-color: #ffe7ba;
-    font-size: 14px;
+  #form-img > form > div > label {
+    font-size: 20px;
+    line-height: 23.4px;
+    margin-bottom: 8px;
+  }
+  #form-img > form {
+    border: 1px solid #ff9d00;
+    border-radius: 24px;
+    padding: 36px;
+    width: 100%;
+    max-width: 500px;
+    order: 1;
+    margin-left: 20px;
   }
   .title--principal {
     max-width: 470px;
@@ -80,57 +183,18 @@
     line-height: 56px;
     margin-top: 0px;
   }
-  .btn-principal {
-    background-color: rgba(65, 211, 189, 1);
-    border: none;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 20px;
-    color: rgba(0, 0, 0, 1);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 9px 15px;
-    width: 220px;
-    height: 51px;
-    border-radius: 15px;
-  }
   .btn--form {
-    background-color: rgba(65, 211, 189, 1);
     width: 100%;
-    font-family: Nunito;
-    font-style: normal;
-    font-weight: bold;
     font-size: 20px;
     line-height: 26px;
-    color: #031d44;
-    border-radius: 10px;
   }
   .placeholder {
     color: #696871;
   }
-  .form-control {
-    background-color: rgba(255, 231, 186, 1);
-  }
-
-  /* Imagen - end */
-
-  /* Columna izquierda - start */
-  .form--login__principal {
-    border: 1px solid var(--orange-color);
-    background: var(--white-color);
-    box-sizing: border-box;
-    border-radius: 24px;
-  }
-  .form--login__title {
-    font-family: Lora;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 46.08px;
-    color: var(--regp1-title-color);
+  .img-login {
+    order: 2;
+    width: 100%;
+    max-width: 450px;
+    margin-left: 20px;
   }
 }
