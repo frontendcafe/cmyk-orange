@@ -77,6 +77,7 @@
   background-color: #ffe7ba;
   font-size: 14px;
   padding: 14px;
+  margin-bottom: 20px;
 }
 select {
   -webkit-appearance: none;
@@ -107,12 +108,12 @@ select {
   line-height: 20px;
   color: #031d44;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 ul {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
   list-style-type: none;
   padding: 0px;
   margin: 0px;
@@ -149,6 +150,9 @@ ul {
     align-self: flex-start;
     margin: 54px 0px 0px 70px;
   }
+  .select {
+    margin: 0px 0px 20px 0px;
+  }
   .arrowOrange {
     width: 48px;
     margin: 0px;
@@ -158,6 +162,11 @@ ul {
     max-width: 1500px;
     display: flex;
     flex-direction: row;
+  }
+  #form-img > form > div > label {
+    font-size: 20px;
+    line-height: 23.4px;
+    margin-bottom: 8px;
   }
   #form-img > form {
     border: 1px solid #ff9d00;
