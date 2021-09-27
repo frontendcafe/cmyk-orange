@@ -1,90 +1,136 @@
 /************** Custom Properties ***************/
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 :root {
   --orange-color: #ff9d00;
   --white-color: #ffffff;
   --black-color: #000000;
   --title-color: #125e8a;
-  --font-title: 'Lora';
+  --font-title: "Lora";
 }
-
-/************** Registro paso 1 - start ***************/
-
+/************** Version Mobile - start ****************/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+.btnGoBack {
+  width: max-content;
+  background-color: transparent;
+  border: none;
+  align-self: flex-start;
+  margin-left: 20px;
+}
+.arrowOrange {
+  width: 36px;
+  margin-top: 32px;
+}
 .title--principal {
+  width: 100%;
   color: var(--title-color);
   font-family: var(--font-title);
   font-style: normal;
   font-weight: 500;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
-  margin-top: 67px;
+  margin-top: 35px;
 }
-.btn-principal {
-  background-color: rgba(65, 211, 189, 1);
-  border: none;
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
-  color: rgba(0, 0, 0, 1);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 9px 15px;
-  width: 220px;
-  height: 51px;
-  border-radius: 15px;
-}
-.btn--form {
-  background-color: rgba(65, 211, 189, 1);
-  width: 100%;
-  font-family: Nunito;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 26px;
-  color: #031d44;
-  border-radius: 10px;
-}
-.btn--form__google {
-  width: 100%;
-  background: #ffffff;
-  border: 1px solid rgba(65, 211, 189, 1);
-  box-sizing: border-box;
-  border-radius: 10px;
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 26px;
-  color: #031d44;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.placeholder {
-  color: #696871;
-}
-.form-control {
-  background-color: rgba(255, 231, 186, 1);
-}
+/************** Version Mobile -end ****************/
 
-/* Imagen - end */
+/************** version Desktop - start ***************/
+@media (min-width: 768px) {
+  .btnGoBack {
+    width: max-content;
+    background-color: transparent;
+    border: none;
+    align-self: flex-start;
+    margin: 0px;
+  }
+  .arrowOrange {
+    width: 48px;
+    margin-top: 32px;
+    margin-left: 0px;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='orange' height='34' viewBox='0 0 24 24' width='34' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+  .select {
+    border: none;
+    border-radius: 10px;
+    background-color: #ffe7ba;
+    font-size: 14px;
+  }
+  .title--principal {
+    max-width: 470px;
+    font-size: 48px;
+    line-height: 56px;
+    margin-top: 0px;
+  }
+  .btn-principal {
+    background-color: rgba(65, 211, 189, 1);
+    border: none;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 15px;
+    width: 220px;
+    height: 51px;
+    border-radius: 15px;
+  }
+  .btn--form {
+    background-color: rgba(65, 211, 189, 1);
+    width: 100%;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #031d44;
+    border-radius: 10px;
+  }
+  .placeholder {
+    color: #696871;
+  }
+  .form-control {
+    background-color: rgba(255, 231, 186, 1);
+  }
 
-/* Columna izquierda - start */
-.form--login__principal {
-  border: 1px solid var(--orange-color);
-  background: var(--white-color);
-  box-sizing: border-box;
-  border-radius: 24px;
-}
-.form--login__title {
-  font-family: Lora;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 46.08px;
-  color: var(--regp1-title-color);
+  /* Imagen - end */
+
+  /* Columna izquierda - start */
+  .form--login__principal {
+    border: 1px solid var(--orange-color);
+    background: var(--white-color);
+    box-sizing: border-box;
+    border-radius: 24px;
+  }
+  .form--login__title {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46.08px;
+    color: var(--regp1-title-color);
+  }
 }

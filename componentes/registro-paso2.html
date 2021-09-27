@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Registro-paso2</title>
+    <title>RegistroPaso2</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,39 +28,80 @@
     <!-- Navbar sin botones - start -->
     <nav class="navbar navbar-light" id="navbg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
+        <a class="navbar-brand" href="../index.html">
           <img
-            src="../public/img/Logo.svg"
+            src="../public/img/Logo(2).svg"
             alt=""
-            width="54"
+            width="213"
             height="54"
             class="d-inline-block"
             id="logonsb"
-          /><b class="textnsb green">Colab</b>
-          <b class="textnsb orange">Orange</b>
+          />
         </a>
       </div>
     </nav>
     <!-- Navbar sin botones - end -->
 
     <!-- Registro paso 2 - start -->
-    <h1 id="regp2Title">Solo queda un paso más</h1>
 
-    <div id="regp2Column">
-      <div>
-        <h1>Agrega tu foto</h1>
-        <img src="../public/img/Group 148.svg" alt="" />
-        <h1>Contanos un poco acerca de vos</h1>
-
-        <textarea
-          class="form-control"
-          id="textarea"
-          rows="3"
-          placeholder="Lorem ipsum..."
-        ></textarea>
+    <div class="container">
+      <button id="goBack" onClick="goBack()" class="btnGoBack">
+        <img
+          src="../public/img/Vector.svg"
+          alt="boton para ir atras"
+          id="arrowOrange"
+          class="arrowOrange"
+        />
+      </button>
+      <h1 id="regp2Title">Solo queda un paso más</h1>
+      <div id="regp2Column">
+        <div id="ttl-uploadPhoto" class="ttl-uploadPhoto">
+          <div class="ttl-photo">
+            <h2>Agrega tu foto</h2>
+            <input
+              type="file"
+              name="photo"
+              aria-label="File browser example"
+              class="uploadPhoto"
+            />
+            <span class="file-custom">
+              <svg
+                width="32"
+                height="32"
+                viewBox="0 0 56 54"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.39876 11.25H39.1904V27H43.7738V11.25C43.7738 8.76825 41.7181 6.75 39.1904 6.75H9.39876C6.87105 6.75 4.81543 8.76825 4.81543 11.25V38.25C4.81543 40.7318 6.87105 42.75 9.39876 42.75H27.7321V38.25H9.39876V11.25Z"
+                  fill="#FFD5A6"
+                />
+                <path
+                  d="M18.5654 24.75L11.6904 33.75H36.8988L27.7321 20.25L20.8571 29.25L18.5654 24.75Z"
+                  fill="#FFD5A6"
+                />
+                <path
+                  d="M43.7738 31.5H39.1904V38.25H32.3154V42.75H39.1904V49.5H43.7738V42.75H50.6488V38.25H43.7738V31.5Z"
+                  fill="#FFD5A6"
+                />
+              </svg>
+            </span>
+          </div>
+          <h2>Contanos un poco acerca de vos</h2>
+          <textarea
+            class="form-control"
+            id="textarea"
+            rows="3"
+            placeholder="Lorem ipsum..."
+          ></textarea>
+          <button type="submit" class="submitBtn">Siguiente</button>
+        </div>
+        <img
+          src="../public/img/Group 152.svg"
+          alt="chique sube su foto de perfil desde el celular"
+          class="regp2Image"
+        />
       </div>
-
-      <img src="../public/img/Group 152.svg" alt="" />
     </div>
     <!-- Registro paso 2 - end -->
 
@@ -100,5 +141,10 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
   </body>
 </html>

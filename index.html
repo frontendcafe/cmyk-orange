@@ -1,154 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Colab-Orange</title>
-    <script type="module" src="js/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
-    />
-    <!-- Bootstrap ICON - start -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
 
-    <!-- CSS - start -->
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <!-- CSS - end -->
-  </head>
-  <body>
-    <!-- Navbar sin botones - start -->
-    <nav class="navbar navbar-light" id="navbg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
-          <img
-            src="public/img/Logo.svg"
-            alt=""
-            width="54"
-            height="54"
-            class="d-inline-block"
-            id="logonsb"
-          /><b class="textnsb green">Colab</b>
-          <b class="textnsb orange">Orange</b>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colab-Orange</title>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script type="module" src="js/firebase.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <!-- Bootstrap ICON - start -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+  <!-- CSS - start -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- CSS - end -->
+</head>
+
+<body>
+  <!-- Navbar con botones - start -->
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/index.html">
+        <img src="public/img/Logo(2).svg" alt="" width="213" height="54" class="d-inline-block" id="logonsb" />
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+        <span class="navbar-text">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li>
+              <form class="d-flex input-group" id="buscar">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" id="txtbuscar" />
+                <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" id="textncb">Crear un proyecto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="textncb">Buscar un proyecto</a>
+            </li>
+            <li class="nav-item text-end">
+              <a class="nav-link btn btn-primary" href="#" id="textbtn">Iniciar Sesión</a>
+            </li>
+          </ul>
+        </span>
       </div>
-    </nav>
-    <!-- Navbar sin botones - end -->
+    </div>
+  </nav>
+  <!-- Navbar con botones - end -->
 
-    <!-- Navbar con botones - start -->
-    <nav class="navbar navbar-expand-lg navbar-light" id="navbg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
-          <img
-            src="public/img/Logo.svg"
-            alt=""
-            width="54"
-            height="54"
-            class="d-inline-block"
-            id="logonsb"
-          /><b class="textnsb green">Colab</b>
-          <b class="textnsb orange">Orange</b>
-        </a>
-
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-
-          <span class="navbar-text">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li>
-                <form class="d-flex input-group" id="buscar">
-                  <input
-                    class="form-control"
-                    type="search"
-                    placeholder="Buscar"
-                    aria-label="Search"
-                    id="txtbuscar"
-                  />
-                  <span class="input-group-text" id="basic-addon2"
-                    ><i class="bi bi-search"></i
-                  ></span>
-                </form>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="#"
-                  id="textncb"
-                  >Crear un proyecto</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#" id="textncb">Buscar un proyecto</a>
-              </li>
-              <li class="nav-item text-end">
-                <a class="nav-link btn btn-primary" href="#" id="textbtn"
-                  >Iniciar Sesión</a
-                >
-              </li>
-            </ul>
-          </span>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar con botones - end -->
-
+  <div class="container-home">
     <h1>ColabOrange conecta programadores y diseñadores con ideas.</h1>
-
-    <!-- Footer - start -->
-    <footer class="py-3 my-4">
-      <div class="text-center">
-        <a class="text-decoration-none" href="#">
-          <img src="public/img/Logo.svg" alt="" class="footer-icon" />
-        </a>
-        <br />
-        <a class="text-decoration-none" href="#">
-          <b class="textlog green">Colab</b>
-          <b class="textlog orange">Orange</b>
-        </a>
-      </div>
-      <br />
-      <ul class="nav justify-content-center pb-3 mb-3">
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
-        </li>
+    <div class="grid">
+      <button id="btnStartNow" class="btnCta">
+        <p>Empieza ya</p>
+      </button>
+      <img src="public/img/Group_157.svg" alt="four people to represent the app" class="img-home" />
+    </div>
+    <div class="h2-tag">
+      <h2>Los Tags más buscados</h2>
+      <ul id="tags-home" class="tags li-home">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
       </ul>
-      <p class="text-center text-white">
-        Hecho por Orange-CMYK4 y Organizado por FEC
-      </p>
-    </footer>
-    <!-- Footer - end -->
-    <script src="js/main.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    </div>
+    <div class="columnH3-img">
+      <div class="h3andCard h3NCardNImgDes">
+        <h3>¡Tu diseño se vuelve real!</h3>
+        <p class="subtitle">Termina tu proyecto en menos tiempo</p>
+        <button id="createProject" class="createbtn">
+          <p>Creá un proyecto</p>
+        </button>
+        <!-- empieza Primera card de proyectos -->
+        <div class="card">
+          <div class="ttl-next">
+            <div>
+              <p id="nameDesOrDev">Martina Otero</p>
+              <h4 id="titlePrj">Diseño de página web</h4>
+            </div>
+            <a href="">
+              <!-- abre un modal -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#125E8A"
+                class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+              </svg>
+            </a>
+          </div>
+          <ul id="tags-project" class="tags li-project">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+          <div class="card-descrip">
+            <p id="description">
+              La idea del proyecto es crear una página web orientada al
+              turismo. El proyecto tendria cinco páginas en total, incluyendo
+              la Home.
+            </p>
+            <p class="card-descrip-more">
+              En un principio solo necesitamos la parte del front, pero quizás
+              más adelante se busque gente para el back.
+            </p>
+          </div>
+          <a href="componentes/aplicar-proyecto.html" class="applProj">
+            <h6>Aplicar al proyecto</h6>
+            <img src="public/img/Group.svg" />
+          </a>
+        </div>
+        <!-- termina Primera card de proyectos -->
+      </div>
+      <img src="public/img/03.svg" alt="ilustracion de diseñadore" class="img-designer" />
+    </div>
+    <div class="columnH3-img">
+      <div class="h3andCard h3NCardNImgPM">
+        <h3>Un nuevo reto para tu carrera</h3>
+        <p class="subtitle">
+          Aumenta tu experiencia profesional ayudando a otros
+        </p>
+        <button id="applyProject" class="applybtn">
+          <p>Aplica a un proyecto</p>
+        </button>
+        <!-- Empieza Segunda card de proyectos -->
+        <div class="card">
+          <div class="ttl-next">
+            <div>
+              <p id="nameDesOrDev">Martina Otero</p>
+              <h4 id="titlePrj">Diseño de página web</h4>
+            </div>
+            <a href="">
+              <!-- abre un modal: -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#125E8A"
+                class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+              </svg>
+            </a>
+          </div>
+          <ul id="tags-project" class="tags li-project">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+          </ul>
+          <div class="card-descrip">
+            <p id="description">
+              La idea del proyecto es crear una página web orientada al
+              turismo. El proyecto tendria cinco páginas en total, incluyendo
+              la Home.
+            </p>
+            <p class="card-descrip-more">
+              En un principio solo necesitamos la parte del front, pero quizás
+              más adelante se busque gente para el back.
+            </p>
+          </div>
+          <a href="componentes/aplicar-proyecto.html" class="applProj">
+            <h6>Aplicar al proyecto</h6>
+            <img src="public/img/Group.svg" />
+          </a>
+        </div>
+        <!-- termina segunda card de proyecto  -->
+      </div>
+      <img src="public/img/05.svg" alt="ilustracion de P M" class="img-PM" />
+    </div>
+  </div>
+
+  <!-- Footer - start -->
+  <footer class="py-3 my-4">
+    <div class="text-center">
+      <a class="text-decoration-none" href="#">
+        <img src="public/img/Logo.svg" alt="" class="footer-icon" />
+      </a>
+      <br />
+      <a class="text-decoration-none" href="#">
+        <b class="textlog green">Colab</b>
+        <b class="textlog orange">Orange</b>
+      </a>
+    </div>
+    <br />
+    <ul class="nav justify-content-center pb-3 mb-3">
+      <li class="nav-item">
+        <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
+      </li>
+    </ul>
+    <p class="text-center text-white">
+      Hecho por Orange-CMYK4 y Organizado por FEC
+    </p>
+  </footer>
+  <!-- Footer - end -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

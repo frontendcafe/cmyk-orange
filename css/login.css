@@ -1,25 +1,26 @@
 #sin-cuenta {
-  font-family: "Lora", sans-serif;
+  font-family: 'Lora', sans-serif;
   background: #41d3bd;
   border-radius: 15px;
   color: #000000;
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
+  margin: 30px;
 }
 
-h4 {
+.saludo {
   color: #125e8a;
-  font-family: "Lora", sans-serif;
+  font-family: 'Lora';
   font-style: normal;
-  font-weight: 100;
+  font-weight: 500;
   font-size: 48px;
   line-height: 56px;
 }
 
 #btn-inicio {
   width: 100%;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -42,16 +43,17 @@ h4 {
 }
 
 .mensaje-cabecera > h1 {
-  font-family: "Lora", sans-serif;
+  font-family: 'Lora', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 56px;
-  line-height: 61px;
+  font-size: 36px;
+  line-height: 46.08px;
   color: #125e8a;
+  text-align: center;
 }
 
 #link-contraseña > a {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-style: italic;
   font-weight: bold;
   font-size: 16px;
@@ -66,22 +68,27 @@ h4 {
   width: 100%;
   height: 50px;
 }
+.form-login {
+  text-align: initial;
+  margin-bottom: 50px;
+}
 
 .placeholder {
   color: #696871;
 }
 
 .form-label {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
-  line-height: 33px;
-  color: #000000;
+  line-height: 32.24px;
+  color: rgba(0, 0, 0, 1);
 }
 
 #img-login {
   height: 650px;
+  margin-right: -30px;
 }
 
 #btn-inicio-google {
@@ -90,7 +97,7 @@ h4 {
   border: 1px solid #41d3bd;
   box-sizing: border-box;
   border-radius: 10px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -107,4 +114,10 @@ h4 {
 }
 .logo:hover .google-icon {
   fill: white;
+}
+
+#sin-cuenta:hover {
+  background: #38ad9c;
+  border-radius: 15px;
+  color: #ffffff;
 }

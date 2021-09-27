@@ -10,10 +10,70 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
+const auth = firebase.auth();
 
 const projects = async () => {
-  const res = await db.collection("proyecto").doc("AIanVAIfg3Q0fBdfxuSz").get();
+  const res = await db.collection("project").doc("OPGE5WRuwZhNMiSGQoCw").get();
   console.log(res.data());
   return res.data();
 };
 projects();
+
+/***** boton de Empieza ya *****/
+const empiezaYa = document.querySelector("#btnStartNow");
+
+empiezaYa.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      localStorage.setItem("iD", user.uid);
+      window.location.assign(`componentes/aplicar-proyecto.html`); //deberia ser buscarproyectos.html
+    } else {
+      // User is signed out
+      alert("Primero debes acceder a tu cuenta o registrarte");
+      window.location.assign(`login.html`);
+    }
+  });
+});
+
+/***** boton de Creá tu proyecto*****/
+const createProject = document.querySelector("#createProject");
+
+createProject.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      localStorage.setItem("iD", user.uid);
+      window.location.assign(`componentes/publicacion.html`);
+    } else {
+      // User is signed out
+      alert("Primero debes acceder a tu cuenta o registrarte");
+      window.location.assign(`login.html`);
+    }
+  });
+});
+/***** boton de Aplica a un Proyecto*****/
+const applyProject = document.querySelector("#applyProject");
+
+applyProject.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      localStorage.setItem("iD", user.uid);
+      window.location.assign(`componentes/aplicar-proyecto.html`);
+    } else {
+      // User is signed out
+      alert("Primero debes acceder a tu cuenta o registrarte");
+      window.location.assign(`login.html`);
+    }
+  });
+});
+
+//
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    console.log("usuario activo");
+  } else {
+    console.log("usuario inactivo");
+  }
+});
