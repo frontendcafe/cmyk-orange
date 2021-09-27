@@ -141,7 +141,7 @@
 }
 
 .deskHidden{
-    display: none;
+    display: none !important;
 }
 
 .hideLogOut{
@@ -157,7 +157,8 @@
         padding: 0 !important;
         
         padding-left: 25px !important;
-        padding-bottom: 20px !important;
+        padding-bottom: 10px !important;
+        padding-top: 10px !important;
         color: var(--white-color);
         
         font-family: Nunito;
@@ -173,13 +174,8 @@
         text-align:left !important;
     }
     
-    #buscar{
-        width: 100%;
-        padding-left: 50%;
-    }
-    
     .mobileHidden{ /* elementos ocultos solo en la vista mobile */
-        display: none;
+        display: none !important;
     }
     
     #logonsb{ /* tamaño del logo naranja */
@@ -212,6 +208,40 @@
     .custom-toggler.navbar-toggler {
         border-color: var(--navbar-bg-color);
     }
+    
+    #buscar{
+        width: 0% !important;
+        padding: 0 !important;
+        height: 32px !important;
+        display: flex !important;
+    }
+    
+    #txtbuscar{
+        width: 20% !important;
+        height: 32px !important;
+        
+        font-family: var(--navbar-font-buscar);
+        font-weight: 400 !important;
+        font-style: normal;
+        font-size: 14px !important;
+        line-height: 17.5px !important;
+    }
+    
+    .spanLupa{
+        width: 50px !important;
+        height: 32px !important;
+        margin: 0 !important;
+    }
+    
+    .iconoLupa{
+        color: var(--white-color);
+        padding-left: 130px !important;
+    }
+    
+    .xTag{
+        display: none !important;
+    }
+    
 }
 /* media query MOBILE/TABLET - end */
 

@@ -15,7 +15,8 @@
     --formInput-color: #696871;
     --pub-formInput-bg-color: #FFE7BA;  
     --pub-formBtn-color: #031D44;
-    --pub-formBtn-bg-color: #FB8500;
+    --pub-formBtn-bg-color: #FF9D00;
+    --pub-formBtn-hover-color: #FD7C19;
     --pub-title-color: #125E8A;
     
     --pubp2-btnFormDiv-color: #FFD5A6;
@@ -227,6 +228,10 @@
     width: 433px;
     
     margin-top: 40px;
+}
+
+#formBtnPubp2:hover{
+    background-color: var(--pub-formBtn-hover-color);
 }
 
 /* Formulario - end */
