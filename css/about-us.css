@@ -23,16 +23,16 @@
 /************** media query MOBILE/TABLET - start ***************/
 @media only screen and (max-width: 991px) {
   .aboutTitle{ /* titulos con texto azul */
-    font-family: Lora;
+    font-family: var(--title);
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 16px !important;
+    line-height: 24px !important;
     
     text-align: center;
-    color: var(--blue-text-color);
+    color: var(--blue-text-color) !important;
     
-    margin-top: 56px;
+    margin-top: 56px !important;
   }
   
   .aboutImgMobile{ /* imagen de 04 personas en vista mobile */
@@ -42,17 +42,17 @@
   }
   
   .aboutIntro{ /* texto debajo de imagen anterior */
-    font-family: Nunito;
+    font-family: var(--other);
     font-style: normal;
     font-weight: normal;
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 14px !important;
+    line-height: 17px !important;
     
     text-align: center;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.025em !important;
     
     color: var(--black-color);
-    margin: 58px 21px 88px 21px;
+    margin: 58px 21px 88px 21px !important;
   }
   
   .carouselImgMobile{ /* imagen del carousel */
@@ -63,7 +63,7 @@
   }
   
   .aboutSubTitle{ /* subtitulo de carousel */
-    font-family: Nunito;
+    font-family: var(--other);
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -71,7 +71,7 @@
   }
   
   .aboutDescription{ /* descripcion del carousel */
-    font-family: Nunito;
+    font-family: var(--other);
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -81,10 +81,157 @@
   .carouselAll{ /* para espaciado entre carousel y footer */
     margin-bottom: 102px;
   }
+  
+  .aboutBtn{
+    background-color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+    border-radius: 8px;
+    color: var(--black-color);
+    
+    font-family: var(--other);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 25px;
+    
+    width: 136px;
+    height: 40px;
+  }
+  
+  .aboutBtn:hover{
+    background-color: var(--orange-hover-color);
+    border: 1px solid var(--orange-hover-color);
+  }
+  
+  .mobileHidden{
+    display: none;
+  }
 }
 /************** media query MOBILE/TABLET - end ***************/
 
 
 /************** About us Desktop - start ***************/
+  .aboutTitle{ /* titulos con texto azul */
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    
+    text-align: center;
+    color: var(--blue-text-color);
+    
+    margin-top: 115px;
+  }
+  
+  .aboutImgDesk{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .aboutIntro{
+    font-family: var(--other);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    
+    text-align: center;
+    
+    color: var(--black-color);
+    margin: 136px 91px 79px 119px;
+  }
+  
+  .team{
+    padding-top: 103px;
+    margin-bottom: 197px;
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .teamImg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-bottom: 60px;
+    border-radius: 50%;
+  }
+  
+  .teamTitle{
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 31px;
+    text-align: center;
+    
+    color: var(--blue-text-color);
+  }
+  
+  .teamSubTitle{
+    font-family: var(--other);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    
+    text-align: center;
+    color: var(--black-color);
+    
+    padding-bottom: 20px;
+  }
+  
+  .teamDescription{
+    font-family: var(--other);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    
+    text-align: center;
+    color: var(--black-color);
+    
+    width: 300px;
+    
+    padding-bottom: 20px;
+  }
+  
+  .teamBtn{
+    font-family: var(--other);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    
+    text-align: center;
+    color: var(--black-color);
+    
+    width: 200px;
+    height: 60px;
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-top: 15px;
+    
+    background-color: var(--orange-color);
+    border: 1px solid var(--orange-color);
+    border-radius: 10px;
+    color: var(--black-color);
+  }
+  
+  .teamBtn:hover{
+    background-color: var(--orange-hover-color);
+    border: 1px solid var(--orange-hover-color);
+  }
+  
+  .deskHidden{
+    display: none;
+  }
   
 /************** About us Desktop - end ***************/

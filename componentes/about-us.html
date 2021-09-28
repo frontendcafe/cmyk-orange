@@ -146,16 +146,17 @@
     <div class="outNav">
       <h1 class="aboutTitle">Un poco sobre Colab Orange</h1>
       
-      <img class="aboutImgMobile" src="../public/img/12.svg" alt="">
+      <img class="aboutImgMobile deskHidden" src="../public/img/12.svg" alt="">
+      <img class="aboutImgDesk mobileHidden" src="../public/img/12 desk.svg" alt="">
       
-      <p class="aboutIntro">Colab Orange surge como proyecto de la mano de la iniciativa CMYK creada por FrontEndCafe. Es un proyecto abierto a la comunidad, con la idea de poder acercar oportunidades de experiencias reales de diseño o programación para aquellas personas que estén recién emprendiendo su camino, que busquen poder practicar o incluso puedan aportar con ideas que tienen en mente.
-      Desde el equipo de CMYK Orange, esperamos que tengan una gran experiencia en este sitio, asi como la tuvimos nosotrxs al momento de realizarla.
+      <p class="aboutIntro">Colab Orange surge como proyecto de la mano de la iniciativa CMYK creada por FrontEndCafe. Es un proyecto abierto a la comunidad, con la idea de poder acercar oportunidades de experiencias reales de diseño o programación para aquellas personas que estén recién emprendiendo su camino, que busquen poder practicar o incluso puedan aportar con ideas que tienen en mente.<br>
+      Desde el equipo de CMYK Orange, esperamos que tengan una gran experiencia en este sitio, asi como la tuvimos nosotrxs al momento de realizarla.<br>
        A continuación les presentamos el equipo que llevo adelante este hermoso proyecto.</p>
       
       <h1 class="aboutTitle">Nuestro Equipo</h1>
       
-      <!-- Carousel - start -->
-      <div id="carouselExampleDark" class="carousel carousel-dark slide carouselAll" data-bs-ride="carousel">
+      <!-- Carousel mobile - start -->
+      <div id="carouselExampleDark" class="carousel carousel-dark slide carouselAll deskHidden" data-bs-ride="carousel">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -168,10 +169,7 @@
               <h5 class="aboutTitle">AngelaG</h5>
               <h5 class="aboutSubTitle">Coordinadora</h5>
               <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, fermentum, in venenatis amet, venenatis, scelerisque pulvinar a. Lectus ante aliquet dignissim quam in. In aliquam tincidunt feugiat sed.</p>
-              
-              <a class="btn btn-primary" type="button" href="">Leer más</a>
-              <!-- <button id="button" aria-describedby="tooltip">Leer más</button> -->
-              <!-- <div id="tooltip" role="tooltip">I'm a tooltip</div> -->
+              <a class="btn btn-danger aboutBtn" type="button" href="">Leer más</a>
             </div>
           </div>
           <div class="carousel-item" data-bs-interval="2000">
@@ -180,6 +178,7 @@
               <h5 class="aboutTitle">AgosJ</h5>
               <h5 class="aboutSubTitle">Diseñadora UX</h5>
               <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, fermentum, in venenatis amet, venenatis, scelerisque pulvinar a. Lectus ante aliquet dignissim quam in. In aliquam tincidunt feugiat sed.</p>
+              <a class="btn btn-danger aboutBtn" type="button" href="">Leer más</a>
             </div>
           </div>
           <div class="carousel-item">
@@ -188,6 +187,7 @@
               <h5 class="aboutTitle">AngelaG</h5>
               <h5 class="aboutSubTitle">Coordinadora</h5>
               <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, fermentum, in venenatis amet, venenatis, scelerisque pulvinar a. Lectus ante aliquet dignissim quam in. In aliquam tincidunt feugiat sed.</p>
+              <a class="btn btn-danger aboutBtn" type="button" href="">Leer más</a>
             </div>
           </div>
         </div>
@@ -200,7 +200,43 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      <!-- Carousel - end -->
+      <!-- Carousel mobile - end -->
+      
+      <!-- Integrantes del Equipo desk - start -->
+      <div class="team mobileHidden">
+        <div>
+          <img class="teamImg" src="../public/img/angie (2).jpg" alt="" width="253px" height="253px">
+          <h2 class="teamTitle">AngelaG</h2>
+          <h2 class="teamSubTitle">Coordinadora</h2>
+          <p class="teamDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a class="btn btn-danger teamBtn" type="button" href="">Leer más &nbsp;&nbsp;<i class="bi bi-arrow-right"></i></a>
+        </div>
+        
+        <div>
+          <img class="teamImg" src="../public/img/Group 160.svg" alt="" width="253px" height="253px">
+          <h2 class="teamTitle">AgosJ</h2>
+          <h2 class="teamSubTitle">Diseñadora UX</h2>
+          <p class="teamDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a class="btn btn-danger teamBtn" type="button" href="">Leer más &nbsp;&nbsp;<i class="bi bi-arrow-right"></i></a>
+        </div>
+        
+        <div>
+          <img class="teamImg" src="../public/img/Group 161.svg" alt="" width="253px" height="253px">
+          <h2 class="teamTitle">Lorecha</h2>
+          <h2 class="teamSubTitle">Frontend developer</h2>
+          <p class="teamDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a class="btn btn-danger teamBtn" type="button" href="">Leer más &nbsp;&nbsp;<i class="bi bi-arrow-right"></i></a>
+        </div>
+        
+        <div>
+          <img class="teamImg" src="../public/img/matias (2).jpg" alt="" width="253px" height="253px">
+          <h2 class="teamTitle">Matias</h2>
+          <h2 class="teamSubTitle">Backend developer</h2>
+          <p class="teamDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a class="btn btn-danger teamBtn" type="button" href="">Leer más &nbsp;&nbsp;<i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <!-- Integrantes del Equipo desk - end -->
       
     </div>
     <!-- About us - end -->
@@ -242,16 +278,12 @@
     <!-- Jquery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- Development version -->
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    
-    <!-- <script
+    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
-    ></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    ></script>
+    
     <script src="../js/navbar.js"></script>
     <script src="../js/about-us.js"></script>
     <script>
