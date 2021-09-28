@@ -17,7 +17,7 @@ $(".iconoLupa").click(function(){
 });
 
 //click fuera de icono lupa
-$(".divPubp2").click(function() {
+$(".outNav").click(function() {
     $(".iconoLupa i").show(); // muestra icono lupa
     $(".iconoLupa").attr("style","padding-left: 130px !important"); // lupa hacia el lado derecho
     
@@ -44,6 +44,8 @@ $(".hamburguesa").click(function(){
         
         $("#logonsb").show(); // muestra COLAB ORANGE
         $("#logonsb").attr("style","margin-left: 166px !important");
+        
+        $(".logoHidden").hide();
         
         $(".navMobile > button > span").removeClass("navbar-toggler-icon"); // oculta icono hamburguesa
         
