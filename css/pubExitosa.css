@@ -8,6 +8,8 @@
 
 /************** Publicacion Exitosa version mobile - start ***************/
 .btnGoBack {
+  width: 100%;
+  max-width: 36px;
   background-color: transparent;
   border: none;
   margin: 32px 0px 0px 20px;
@@ -15,7 +17,7 @@
 #pubExTitle {
   /* titulo: ¡Felicidades! Tu proyecto ya ha sido publicado */
   color: var(--pubEx-title-color);
-
+  font-family: var(--pubEx-font-title);
   display: block; /* titulo centrado */
   margin-left: auto;
   margin-right: auto;
@@ -38,6 +40,7 @@
 /************** version Desktop - start ***************/
 @media (min-width: 768px) {
   .btnGoBack {
+    max-width: 48px;
     margin: 54px 0px 0px 70px;
   }
   #pubExTitle {
