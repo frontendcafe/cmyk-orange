@@ -5,73 +5,86 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Document</title>
+  <title>RegistroPaso3</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
-  <!-- Bootstrap ICON - start -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+
+    <!-- CSS - start -->
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/registroPaso3.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <!-- CSS - end -->
+  </head>
+
+<body>
+  <!-- Navbar sin botones - start -->
+  <nav class="navbar navbar-light" id="navbg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../public/img/Logo(2).svg" alt="" width="213" height="54" class="d-inline-block" id="logonsb" />
+      </a>
+    </div>
+  </nav>
+  <!-- Navbar sin botones - end -->
 
   <!-- CSS - start -->
   <link rel="stylesheet" href="../css/navbar.css" />
   <link rel="stylesheet" href="../css/registroPaso3.css" />
   <link rel="stylesheet" href="../css/footer.css" />
   <!-- CSS - end -->
-</head>
+  </head>
 
-<body>
-  <!-- Navbar sin botones - start -->
-  <nav class="navbar navbar-light" id="navbg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
-        <img src="../public/img/Logo.svg" alt="" width="54" height="54" class="d-inline-block" id="logonsb" /><b
-          class="textnsb green">Colab</b>
-        <b class="textnsb orange">Orange</b>
-      </a>
-    </div>
-  </nav>
-  <!-- Navbar sin botones - end -->
-
-  <!-- Registro paso 1 - start -->
-
-  <div class="container">
+  <div class="container1">
     <button id="goBack" onClick="goBack()" class="btnGoBack">
       <img src="../public/img/Vector.svg" alt="boton para ir atras" id="arrowOrange" class="arrowOrange" />
     </button>
-    <h1 class="title--principal">Casí listo tu perfíl en Colab orange</h1>
+    <h1 class="title--principal">Casi listo tu perfíl en Colab Orange</h1>
 
     <!-- formulario e imagen principal -->
-    <div class="form mx-3 my-4">
+    <div class="form mx-3 my-4 form-img" id="form-img">
       <form action="#">
         <div class="">
           <label for="redes" class="form-label">Redes Sociales</label>
           <input type="text" class="form-control" placeholder="https://ejemplo-tu-perfil.com" />
           <input type="text" class="form-control my-3" placeholder="https://www.ejemplo.com/" />
         </div>
-        <div class="">
+
+        <div class="label-select mt-5">
           <label for="tags" class="form-label">Tu Stack</label>
-          <select name="tags" class="select">
+          <select name="tags" class="select" id="select">
             <option selected>Selecciona tus stack</option>
-            <option value="diseño">Diseño</option>
-            <option value="desarrollo">Desarrollo</option>
+            <option value="Diseño">Diseño</option>
+            <option value="Desarrollo">Desarrollo</option>
             <option value="HTML">HTML</option>
-            <option value="css">CSS</option>
-            <option value="xd">Xd</option>
-            <option value="ux">UX</option>
-            <option value="ui">UI</option>
-            <option value="figma">Figma</option>
-            <option value="javascript">JavaScript</option>
-            <option value="react">React</option>
-            <option value="next">Next</option>
+            <option value="CSS">CSS</option>
+            <option value="Xd">Xd</option>
+            <option value="UX">UX</option>
+            <option value="UI">UI</option>
+            <option value="Figma">Figma</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="React">React</option>
+            <option value="Next">Next</option>
           </select>
         </div>
+        <ul id="tags"></ul>
         <button class="mt-5 btn btn-lg btn--form btn-block py-2" type="submit">
           Registrarme
         </button>
       </form>
-      <img id="img-login" src="../public/img/image3.svg" alt="" />
+      <img src="../public/img/image3.svg" alt="chique emocionado por estar en el último paso para su perfil"
+        class="img-login" />
     </div>
     <!-- formulario e imagen principal -->
+  </div>
+  <!-- formulario e imagen principal -->
   </div>
 
   <!-- Footer - start -->
@@ -119,4 +132,18 @@
   </script>
 </body>
 
+<<<<<<< HEAD </html>
+  =======
+  <script src="../js/registro-paso3.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+  </body>
+
 </html>
+>>>>>>> 40e285c3b64e55949a569a2e1a46f821f33e6d6d

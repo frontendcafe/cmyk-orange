@@ -7,15 +7,6 @@
 /************** Custom Properties ***************/
 
 /************** Publicacion Exitosa version mobile - start ***************/
-.btnGoBack {
-  background-color: transparent;
-  border: none;
-}
-.arrowOrange {
-  width: 36px;
-  margin-top: 32px;
-  margin-left: 20px;
-}
 #pubExTitle {
   /* titulo: ¡Felicidades! Tu proyecto ya ha sido publicado */
   color: var(--pubEx-title-color);
@@ -43,11 +34,6 @@
 
 /************** version Desktop - start ***************/
 @media (min-width: 768px) {
-  .arrowOrange {
-    width: 48px;
-    margin-top: 54px;
-    margin-left: 70px;
-  }
   #pubExTitle {
     /* titulo: ¡Felicidades! Tu proyecto ya ha sido publicado */
     color: var(--pubEx-title-color);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Document</title>
+    <title>PublicaciónPaso2</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -26,22 +26,10 @@
   </head>
   <body>
     <!-- Navbar con botones - start -->
-    <nav class="navbar navbar-expand-lg navbar-light" id="navbg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="http://frontendcafe/cmyk-orange/">
-          <img
-            src="../public/img/Logo.svg"
-            alt=""
-            width="54"
-            height="54"
-            class="d-inline-block"
-            id="logonsb"
-          /><b class="textnsb green">Colab</b>
-          <b class="textnsb orange">Orange</b>
-        </a>
-
+    <nav class="navbar navbar-expand-lg navbar-dark navbg">
+      <div class="container-fluid navMobile">
         <button
-          class="navbar-toggler"
+          class="navbar-toggler custom-toggler hamburguesa"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarText"
@@ -49,14 +37,45 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"
+            ><i class="bi bi-x-lg deskHidden xTag"></i
+          ></span>
         </button>
+
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../public/img/Logo(2).svg"
+            alt=""
+            width="213"
+            height="54"
+            class="d-inline-block"
+            id="logonsb"
+          />
+        </a>
+
+        <span class="deskHidden iconoLupa">
+          <i class="bi bi-search"></i>
+        </span>
+
+        <form class="d-flex input-group deskHidden mobileHidden" id="buscar">
+          <input
+            class="form-control mobileHidden"
+            type="search"
+            placeholder="Buscar"
+            aria-label="Search"
+            id="txtbuscar"
+          />
+          <span class="input-group-text mobileHidden spanLupa" id="basic-addon2"
+            ><i class="bi bi-search"></i
+          ></span>
+        </form>
+
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
           <span class="navbar-text">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li>
+              <li class="mobileHidden">
                 <form class="d-flex input-group" id="buscar">
                   <input
                     class="form-control"
@@ -70,19 +89,47 @@
                   ></span>
                 </form>
               </li>
+
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="#"
-                  id="textncb"
+                <a class="nav-link active deskHidden textncb" href="#"
+                  >Iniciar Sesión</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link textncb" aria-current="page" href="#"
                   >Crear un proyecto</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" id="textncb">Buscar un proyecto</a>
+                <a class="nav-link textncb" href="#">Buscar un proyecto</a>
               </li>
-              <li class="nav-item text-end">
+
+              <!-- Oculto en Log Out o mientras no inicia sesion - start -->
+              <li class="nav-item">
+                <a class="nav-link textncb hideLogOut" href="#">Mi perfil</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link textncb hideLogOut" href="#"
+                  >Mis Proyectos</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link textncb hideLogOut" href="#"
+                  >Mis Postulaciones</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link textncb hideLogOut" href="#"
+                  >Cerrar Sesión</a
+                >
+              </li>
+              <!-- Oculto en Log Out o mientras no inicia sesion - end -->
+
+              <li class="nav-item text-end mobileHidden">
                 <a class="nav-link btn btn-primary" href="#" id="textbtn"
                   >Iniciar Sesión</a
                 >
@@ -95,89 +142,94 @@
     <!-- Navbar con botones - end -->
 
     <!-- Publicacion paso 2 - start -->
-    <a href="#"
-      ><img
-        src="../public/img/Vector.svg"
-        alt=""
-        width="48"
-        height="48"
-        id="arrowOrange"
-    /></a>
+    <div class="divPubp2">
+      <a href="#"
+        ><img
+          src="../public/img/Vector.svg"
+          alt=""
+          width="48"
+          height="48"
+          id="arrowOrange"
+      /></a>
 
-    <h1 id="pubp2Title">¿Con qué tecnologías se va a trabajar?</h1>
+      <h1 id="pubp2Title">¿Con qué tecnologías se va a trabajar?</h1>
 
-    <div id="pubp2Column">
-      <form>
-        <div class="mb-4">
-          <label for="formNombre" class="form-label">Links del proyecto</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="https://ejemplo.com"
-            id="formNombre"
-          />
-        </div>
-        <div class="mb-4">
-          <input
-            type="email"
-            class="form-control"
-            placeholder="https://www.ejemplo.com/file"
-            id="formEmail"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formNP" class="form-label"
-            >Tags relacionados al proyecto</label
-          >
-          <select class="form-select" id="formSelect">
-            <option selected>Selecciona uno o varios</option>
-            <option value="1" id="selJavascript">JavaScript</option>
-            <option value="2" id="selNodejs">NodeJS</option>
-            <option value="3" id="selPython">Python</option>
-            <option value="4" id="selHtml">HTML</option>
-            <option value="5" id="selCss">CSS</option>
-            <option value="6" id="selUx">UX</option>
-          </select>
-        </div>
-
-        <div class="form-group" id="formDiv">
-          <div class="input-group mb-3">
-            <span id="spanJavaScript">JavaScript</span>
-            <b class="btn btnClose">x</b>
+      <div id="pubp2Column">
+        <form>
+          <div class="mb-4">
+            <label for="formNombre" class="form-label"
+              >Links del proyecto</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              placeholder="https://ejemplo.com"
+              id="formNombre"
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              type="email"
+              class="form-control"
+              placeholder="https://www.ejemplo.com/file"
+              id="formEmail"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="formNP" class="form-label"
+              >Tags relacionados al proyecto</label
+            >
+            <select class="form-select" id="formSelect">
+              <option selected>Selecciona uno o varios</option>
+              <option value="1" id="selJavascript">JavaScript</option>
+              <option value="2" id="selNodejs">NodeJS</option>
+              <option value="3" id="selPython">Python</option>
+              <option value="4" id="selHtml">HTML</option>
+              <option value="5" id="selCss">CSS</option>
+              <option value="6" id="selUx">UX</option>
+            </select>
           </div>
 
-          <div class="input-group mb-3">
-            <span id="spanNodeJS">NodeJS</span>
-            <b class="btn btnClose">x</b>
+          <div class="form-group" id="formDiv">
+            <div class="input-group mb-3">
+              <span id="spanJavaScript">JavaScript</span>
+              <b class="btn btnClose">x</b>
+            </div>
+
+            <div class="input-group mb-3">
+              <span id="spanNodeJS">NodeJS</span>
+              <b class="btn btnClose">x</b>
+            </div>
+
+            <div class="input-group mb-3">
+              <span id="spanPython">Python</span>
+              <b class="btn btnClose">x</b>
+            </div>
+
+            <div class="input-group mb-3">
+              <span id="spanHTML">HTML</span>
+              <b class="btn btnClose">x</b>
+            </div>
+
+            <div class="input-group mb-3">
+              <span id="spanCSS">CSS</span>
+              <b class="btn btnClose">x</b>
+            </div>
+
+            <div class="input-group mb-3">
+              <span id="spanUX">UX</span>
+              <b class="btn btnClose">x</b>
+            </div>
           </div>
 
-          <div class="input-group mb-3">
-            <span id="spanPython">Python</span>
-            <b class="btn btnClose">x</b>
-          </div>
+          <button type="submit" class="btn btn-primary" id="formBtnPubp2">
+            Publicar
+          </button>
+        </form>
 
-          <div class="input-group mb-3">
-            <span id="spanHTML">HTML</span>
-            <b class="btn btnClose">x</b>
-          </div>
-
-          <div class="input-group mb-3">
-            <span id="spanCSS">CSS</span>
-            <b class="btn btnClose">x</b>
-          </div>
-
-          <div class="input-group mb-3">
-            <span id="spanUX">UX</span>
-            <b class="btn btnClose">x</b>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary" id="formBtnPubp2">
-          Publicar
-        </button>
-      </form>
-
-      <img src="../public/img/Group 87.svg" alt="" />
+        <img src="../public/img/Group 87.svg" alt="" class="imgDesktop" />
+        <img src="../public/img/Group 111.svg" alt="" class="imgMobile" />
+      </div>
     </div>
     <!-- Publicacion paso 2 - end -->
 
@@ -187,27 +239,31 @@
         <a class="text-decoration-none" href="#">
           <img src="../public/img/Logo.svg" alt="" class="footer-icon" />
         </a>
-        <br />
-        <a class="text-decoration-none" href="#">
-          <b class="textlog green">Colab</b>
-          <b class="textlog orange">Orange</b>
-        </a>
+        <br class="mobileHidden" />
+        <div>
+          <a class="text-decoration-none" href="#">
+            <b class="textlog green">Colab</b>
+            <b class="textlog orange">Orange</b>
+          </a>
+        </div>
       </div>
-      <br />
-      <ul class="nav justify-content-center pb-3 mb-3">
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
-        </li>
-      </ul>
-      <p class="text-center text-white">
-        Hecho por Orange-CMYK4 y Organizado por FEC
-      </p>
+      <br class="mobileHidden" />
+      <div class="textFooter">
+        <ul class="nav justify-content-center pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
+          </li>
+        </ul>
+        <p class="text-center text-white">
+          Hecho por Orange-CMYK4 y Organizado por FEC
+        </p>
+      </div>
     </footer>
     <!-- Footer - end -->
 
@@ -219,8 +275,11 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
-
-    <script src="../js/main.js"></script>
     <script src="../js/pub-paso2.js"></script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
   </body>
 </html>
