@@ -90,63 +90,65 @@
         </div>
       </div>
     </nav>
-    <a href="#"
-      ><img
+
+    <button id="goBack" onClick="goBack()" class="btnGoBack">
+      <img
         src="../public/img/Vector.svg"
-        alt=""
-        width="48"
-        height="48"
+        alt="boton para ir atras"
         id="arrowOrange"
-    /></a>
+        class="arrowOrange"
+      />
+    </button>
+    <div class="container">
+      <h1 id="pubTitle">¿De qué trata tu proyecto?</h1>
 
-    <h1 id="pubTitle">¿De qué trata tu proyecto?</h1>
+      <div id="pubColumn">
+        <form>
+          <div class="mb-4">
+            <label for="formNombre" class="form-label">Nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nombre"
+              id="formNombre"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="formEmail" class="form-label">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email"
+              id="formEmail"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="formNP" class="form-label">Nombre del proyecto</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nombre del proyecto"
+              id="formNP"
+            />
+          </div>
 
-    <div id="pubColumn">
-      <form>
-        <div class="mb-3">
-          <label for="formNombre" class="form-label">Nombre</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Nombre"
-            id="formNombre"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formEmail" class="form-label">E-mail</label>
-          <input
-            type="email"
-            class="form-control"
-            placeholder="Email"
-            id="formEmail"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="formNP" class="form-label">Nombre del proyecto</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Nombre del proyecto"
-            id="formNP"
-          />
-        </div>
+          <div class="form-group">
+            <label for="formDP">Descripción del proyecto</label>
+            <textarea
+              class="form-control"
+              id="formDP"
+              rows="3"
+              placeholder="Descripcion del proyecto"
+            ></textarea>
+          </div>
 
-        <div class="form-group">
-          <label for="formDP">Descripción del proyecto</label>
-          <textarea
-            class="form-control"
-            id="formDP"
-            rows="3"
-            placeholder="Descripcion del proyecto"
-          ></textarea>
-        </div>
+          <button type="submit" class="btn btn-primary" id="formBtn">
+            Siguiente
+          </button>
+        </form>
 
-        <button type="submit" class="btn btn-primary" id="formBtn">
-          Siguiente
-        </button>
-      </form>
-
-      <img src="../public/img/Group 85.svg" alt="" />
+        <img src="../public/img/Group 85.svg" alt="" />
+      </div>
     </div>
     <footer class="py-3">
       <div class="text-center">
@@ -181,5 +183,10 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
   </body>
 </html>
