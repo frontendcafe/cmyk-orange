@@ -213,6 +213,11 @@ h3 {
     max-width: 440px;
     margin-bottom: 25px;
   }
+
+  .submitBtn:hover {
+    color: #ffffff;
+    background-color: #38ad9c;
+  }
   /* Columna izquierda - end */
 }
 

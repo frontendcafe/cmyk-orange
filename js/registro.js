@@ -16,19 +16,27 @@ const auth = firebase.auth();
 const registrationForm = document.querySelector("#registrationForm");
 
 //Signup with email and password
+
 registrationForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const name = document.querySelector("#nombre").value;
+  const name1 = document.querySelector("#nombre").value;
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
   const repeatepassword = document.querySelector("#repeatepassword").value;
-
+  console.log(name1);
   if (password === repeatepassword) {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((userCredential) => {
         registrationForm.reset();
+        console.log(userCredential);
         console.log("sign up");
+
+        localStorage.setItem("name", name1);
+        localStorage.setItem("email", email);
+        localStorage.setItem("uid", userCredential.user.uid);
+        //db.collection("Users").doc(userCredential.user.uid).set(usuario);
+
         window.location.assign(`registro-paso2.html`);
       })
       .catch((error) => {
@@ -39,7 +47,7 @@ registrationForm.addEventListener("submit", (e) => {
   }
 });
 
-//Signin with Google
+//Signup with Google
 const googleButton = document.querySelector("#btn-inicio-google");
 googleButton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -54,4 +62,12 @@ googleButton.addEventListener("click", (e) => {
     .catch((err) => {
       console.log(err);
     });
+});
+
+//Boton de usuario registrado hacia la home
+const yaEstoyRegistrado = document.querySelector(".btn-principal");
+
+yaEstoyRegistrado.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.location.assign(`/index.html`);
 });
