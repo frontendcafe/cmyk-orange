@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About us</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap ICON - start -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
+    <!-- CSS - start -->
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/about-us.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+    <!-- CSS - end -->
+  </head>
+  <body>
+    <!-- Navbar con botones - start -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbg">
+      <div class="container-fluid navMobile">
+        <button
+          class="navbar-toggler custom-toggler hamburguesa"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"
+            ><i class="bi bi-x-lg deskHidden xTag"></i
+          ></span>
+        </button>
+
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../public/img/Logo(2).svg"
+            alt=""
+            width="213"
+            height="54"
+            class="d-inline-block"
+            id="logonsb"
+          />
+          <img src="../public/img/Logo.svg" alt="" width="auto" height="24" class="deskHidden logoHidden">
+        </a>
+
+        <span class="deskHidden iconoLupa">
+          <i class="bi bi-search"></i>
+        </span>
+
+        <form class="d-flex input-group deskHidden mobileHidden" id="buscar">
+          <input
+            class="form-control mobileHidden"
+            type="search"
+            placeholder="Buscar"
+            aria-label="Search"
+            id="txtbuscar"
+          />
+          <span class="input-group-text mobileHidden spanLupa" id="basic-addon2"
+            ><i class="bi bi-search"></i
+          ></span>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+
+          <span class="navbar-text">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="mobileHidden">
+                <form class="d-flex input-group" id="buscar">
+                  <input
+                    class="form-control"
+                    type="search"
+                    placeholder="Buscar"
+                    aria-label="Search"
+                    id="txtbuscar"
+                  />
+                  <span class="input-group-text" id="basic-addon2"
+                    ><i class="bi bi-search"></i
+                  ></span>
+                </form>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active deskHidden textncb" href="#"
+                  >Iniciar Sesión</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link textncb" aria-current="page" href="#"
+                  >Crear un proyecto</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link textncb" href="#">Buscar un proyecto</a>
+              </li>
+
+              <!-- Oculto en Log Out o mientras no inicia sesion - start -->
+              <li class="nav-item">
+                <a class="nav-link textncb hideLogOut" href="#">Mi perfil</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link textncb hideLogOut" href="#"
+                  >Mis Proyectos</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link textncb hideLogOut" href="#"
+                  >Mis Postulaciones</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link textncb hideLogOut" href="#"
+                  >Cerrar Sesión</a
+                >
+              </li>
+              <!-- Oculto en Log Out o mientras no inicia sesion - end -->
+
+              <li class="nav-item text-end mobileHidden">
+                <a class="nav-link btn btn-primary" href="#" id="textbtn"
+                  >Iniciar Sesión</a
+                >
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar con botones - end -->
+
+    <!-- About us - start -->
+    <div class="outNav">
+      <h1 class="aboutTitle">Un poco sobre Colab Orange</h1>
+      
+      <img class="aboutImgMobile" src="../public/img/12.svg" alt="">
+      
+      <p class="aboutIntro">Colab Orange surge como proyecto de la mano de la iniciativa CMYK creada por FrontEndCafe. Es un proyecto abierto a la comunidad, con la idea de poder acercar oportunidades de experiencias reales de diseño o programación para aquellas personas que estén recién emprendiendo su camino, que busquen poder practicar o incluso puedan aportar con ideas que tienen en mente.
+      Desde el equipo de CMYK Orange, esperamos que tengan una gran experiencia en este sitio, asi como la tuvimos nosotrxs al momento de realizarla.
+       A continuación les presentamos el equipo que llevo adelante este hermoso proyecto.</p>
+      
+      <h1 class="aboutTitle">Nuestro Equipo</h1>
+      
+      <!-- Carousel - start -->
+      <div id="carouselExampleDark" class="carousel carousel-dark slide carouselAll" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active carouselDivMobile" data-bs-interval="10000">
+            <img src="../public/img/Group 156.svg" class="d-block w-100 carouselImgMobile" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h5 class="aboutTitle">AngelaG</h5>
+              <h5 class="aboutSubTitle">Coordinadora</h5>
+              <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, fermentum, in venenatis amet, venenatis, scelerisque pulvinar a. Lectus ante aliquet dignissim quam in. In aliquam tincidunt feugiat sed.</p>
+              
+              <a class="btn btn-primary" type="button" href="">Leer más</a>
+              <!-- <button id="button" aria-describedby="tooltip">Leer más</button> -->
+              <!-- <div id="tooltip" role="tooltip">I'm a tooltip</div> -->
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="../public/img/Group 156.svg" class="d-block w-100 carouselImgMobile" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h5 class="aboutTitle">AgosJ</h5>
+              <h5 class="aboutSubTitle">Diseñadora UX</h5>
+              <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, fermentum, in venenatis amet, venenatis, scelerisque pulvinar a. Lectus ante aliquet dignissim quam in. In aliquam tincidunt feugiat sed.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../public/img/Group 156.svg" class="d-block w-100 carouselImgMobile" alt="...">
+            <div class="carousel-caption d-md-block">
+              <h5 class="aboutTitle">AngelaG</h5>
+              <h5 class="aboutSubTitle">Coordinadora</h5>
+              <p class="aboutDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, fermentum, in venenatis amet, venenatis, scelerisque pulvinar a. Lectus ante aliquet dignissim quam in. In aliquam tincidunt feugiat sed.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Carousel - end -->
+      
+    </div>
+    <!-- About us - end -->
+
+    <!-- Footer - start -->
+    <footer class="py-3">
+      <div class="text-center">
+        <a class="text-decoration-none" href="#">
+          <img src="../public/img/Logo.svg" alt="" class="footer-icon" />
+        </a>
+        <br class="mobileHidden" />
+        <div>
+          <a class="text-decoration-none" href="#">
+            <b class="textlog green">Colab</b>
+            <b class="textlog orange">Orange</b>
+          </a>
+        </div>
+      </div>
+      <br class="mobileHidden" />
+      <div class="textFooter">
+        <ul class="nav justify-content-center pb-3 mb-3">
+          <li class="nav-item">
+            <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
+          </li>
+        </ul>
+        <p class="text-center text-white">
+          Hecho por Orange-CMYK4 y Organizado por FEC
+        </p>
+      </div>
+    </footer>
+    <!-- Footer - end -->
+
+    <!-- Jquery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Development version -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/about-us.js"></script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>
