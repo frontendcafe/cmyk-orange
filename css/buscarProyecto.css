@@ -199,6 +199,30 @@
   color: var(--blue-text-color);
 }
 
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+.li-home {
+  justify-content: center;
+}
+.li-home li {
+  border: none;
+  background-color: #ffd5a6;
+  border-radius: 16px;
+  width: 100px;
+  font-size: 12px;
+  font-family: 'Nunito';
+  font-weight: 700;
+  height: auto;
+  text-align: center;
+  padding: 5px 15px;
+  margin: 12px 10px;
+}
+
 .buscaImgDesk {
   display: block;
   margin-left: auto;

@@ -51,7 +51,13 @@
             class="d-inline-block"
             id="logonsb"
           />
-          <img src="../public/img/Logo.svg" alt="" width="auto" height="24" class="deskHidden logoHidden">
+          <img
+            src="../public/img/Logo.svg"
+            alt=""
+            width="auto"
+            height="24"
+            class="deskHidden logoHidden"
+          />
         </a>
 
         <span class="deskHidden iconoLupa">
@@ -92,48 +98,74 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active deskHidden textncb" href="#"
-                  >Iniciar Sesión</a
+                <a
+                  class="nav-link active deskHidden textncb logout"
+                  href="../login.html"
+                  id="logout"
                 >
+                  Iniciar Sesión
+                </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link textncb" aria-current="page" href="#"
-                  >Crear un proyecto</a
+                <button
+                  class="nav-link textncb"
+                  aria-current="page"
+                  id="createProj"
                 >
+                  Crear un proyecto
+                </button>
               </li>
               <li class="nav-item">
-                <a class="nav-link textncb" href="#">Buscar un proyecto</a>
+                <a
+                  class="nav-link textncb"
+                  href="../componentes/buscarProyecto.html"
+                >
+                  Buscar un proyecto
+                </a>
               </li>
-
+              <li class="nav-item">
+                <a class="nav-link textncb" href="../componentes/about-us.html">
+                  About us
+                </a>
+              </li>
               <!-- Oculto en Log Out o mientras no inicia sesion - start -->
               <li class="nav-item">
-                <a class="nav-link textncb hideLogOut" href="#">Mi perfil</a>
+                <a
+                  class="nav-link textncb hideLogOut"
+                  href="../componentes/about-us.html"
+                >
+                  About us
+                </a>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link textncb hideLogOut" href="#"
-                  >Mis Proyectos</a
-                >
+                <button class="nav-link textncb hideLogOut" id="createProj">
+                  Crear un proyecto
+                </button>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link textncb hideLogOut" href="#"
-                  >Mis Postulaciones</a
-                >
+                <button class="nav-link textncb hideLogOut">
+                  Buscar un proyecto
+                </button>
               </li>
 
               <li class="nav-item">
-                <a class="nav-link textncb hideLogOut" href="#"
-                  >Cerrar Sesión</a
-                >
+                <button class="nav-link textncb hideLogOut">
+                  Cerrar Sesión
+                </button>
               </li>
               <!-- Oculto en Log Out o mientras no inicia sesion - end -->
 
               <li class="nav-item text-end mobileHidden">
-                <a class="nav-link btn btn-primary" href="#" id="textbtn"
-                  >Iniciar Sesión</a
+                <a
+                  class="nav-link btn btn-primary logout2"
+                  href="../login.html"
+                  id="textbtn"
                 >
+                  Iniciar Sesión
+                </a>
               </li>
             </ul>
           </span>
@@ -149,7 +181,17 @@
       <img class="aboutImgMobile deskHidden" src="../public/img/12.svg" alt="">
       <img class="buscaImgDesk mobileHidden" src="../public/img/Group94.svg" alt="">
       
-      <h2 class="buscaSubtitle"> Categorías populares</h2>
+     
+      <div class="h2-tag">
+        <h2 class="buscaSubtitle"> Categorías populares</h2>
+        <ul id="tags-home" class="tags li-home">
+        <li>JavaScript</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        </ul>
+      </div>
  
      
       </div>

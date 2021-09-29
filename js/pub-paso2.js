@@ -53,11 +53,27 @@ createProj.addEventListener("click", (e) => {
   });
 });
 
-auth.onAuthStateChanged((user) => {
+//cambio de botón iniciar sesion (version mobile) por cerrar sesion en Navbar
+firebase.auth().onAuthStateChanged((user) => {
   if (user) {
-    const logout = document.querySelector("#logout");
+    const logout = document.querySelector(".logout");
     logout.innerHTML = "Cerrar Sesion";
-    console.log(logout);
+    var uid = user.uid;
+    console.log(uid);
+  } else {
+    logout.innerHTML = "Iniciar Sesión";
+  }
+});
+
+//cambio de botón iniciar sesion (version Desktop) por cerrar sesion en Navbar
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    const logout2 = document.querySelector(".logout2");
+    logout2.innerHTML = "Cerrar Sesion";
+    var uid = user.uid;
+    console.log(uid);
+  } else {
+    logout.innerHTML = "Iniciar Sesión";
   }
 });
 /************** Publicacion paso 2 - end ***************/
