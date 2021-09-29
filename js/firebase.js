@@ -69,6 +69,31 @@ applyProject.addEventListener("click", (e) => {
   });
 });
 
+//boton de crear proyecto en Navbar
+const createProj = document.querySelector("#createProj");
+createProj.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      localStorage.setItem("iD", user.uid);
+      window.location.assign(`componentes/publicacion.html`);
+    } else {
+      // User is signed out
+      alert("Primero debes acceder a tu cuenta o registrarte");
+      window.location.assign(`../login.html`);
+    }
+  });
+});
+
+//cambio de botón iniciar sesion por cerrar sesion
+auth.onAuthStateChanged((user) => {
+  if (user) {
+    const logout = document.querySelector("#logout");
+    logout.innerHTML = "Cerrar Sesion";
+    console.log(logout);
+  }
+});
+
 //
 auth.onAuthStateChanged((user) => {
   if (user) {
