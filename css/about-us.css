@@ -9,6 +9,7 @@
   --orange-color: #ff9d00;
   --orange-hover-color: #fd7c19;
   --blue-text-color: #125E8A;
+  --popIcon-color: #41D3BD;
 
 
   --white-color: #ffffff;
@@ -106,6 +107,8 @@
   .mobileHidden{
     display: none;
   }
+  
+  
 }
 /************** media query MOBILE/TABLET - end ***************/
 
@@ -234,4 +237,67 @@
     display: none;
   }
   
+  /* Popper Js - start */
+  #tooltip {
+    background-color: var(--white-color);
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+    
+    display: none;
+    
+    padding: 25px 36px 40px 0px;
+    border: 1px solid var(--blue-text-color);
+  }
+  
+  #tooltip[data-show] {
+    display: block;
+  }
+  
+  .popTitle{
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    
+    color: var(--blue-text-color);
+    
+    margin-left: 36px;
+    margin-bottom: 36px;
+  }
+  
+  .popIcon{
+    color: var(--popIcon-color);
+    background-color: var(--white-color);
+    
+    border: 1px solid var(--white-color);
+    
+    margin-left: 57px;
+    font-size: 2rem;
+    display: inline;
+    
+    padding: 0 25px 0 0;
+  }
+  
+  .popText{
+    font-family: var(--other);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    
+    color: var(--black-color);
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    padding: 0;
+  }
+  
+  .input-group{
+    height: 43px;
+  }
+  
+  /* Popper Js - end */
 /************** About us Desktop - end ***************/
