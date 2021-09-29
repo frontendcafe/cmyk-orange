@@ -196,7 +196,14 @@
   font-size: 38px;
   line-height: 56px;
   text-align: center;
+  margin-bottom: 40px;
   color: var(--blue-text-color);
+}
+
+.h2-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tags {
@@ -213,14 +220,84 @@
   border: none;
   background-color: #ffd5a6;
   border-radius: 16px;
-  width: 100px;
-  font-size: 12px;
+  width: 186px;
+  font-size: 22px;
   font-family: 'Nunito';
   font-weight: 700;
   height: auto;
   text-align: center;
   padding: 5px 15px;
   margin: 12px 10px;
+}
+
+.projectSubtitle {
+  font-family: var(--title);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 56px;
+  margin-left: 110px;
+  margin-bottom: 20px;
+  margin-top: 80px;
+
+  color: var(--blue-text-color);
+}
+.content-card {
+  display: flex;
+}
+.card {
+  display: flex;
+  background-color: #ff9d00;
+  width: 505px;
+  height: 363px;
+  border: none;
+  border-radius: 24px;
+  padding: 50px;
+  margin-top: 20px;
+  margin-left: 110px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.ttl-next {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.ttl-next p {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'Nunito';
+  font-weight: 600;
+}
+.li-project {
+  margin: 5px 5px;
+}
+.li-project li {
+  border: none;
+  color: white;
+  background-color: #125e8a;
+  border-radius: 65px;
+  width: 93px;
+  font-size: 14px;
+  font-family: 'Nunito';
+  font-weight: 700;
+  height: auto;
+  text-align: center;
+  padding: 5px 10px;
+  margin: 5px 2px;
+}
+
+.card-descrip p {
+  font-size: 18px;
+  line-height: 20px;
+  font-family: 'Nunito';
+  text-align: justify;
+  font-weight: 400;
+}
+
+.card-descrip-more {
+  display: none;
 }
 
 .buscaImgDesk {
@@ -240,92 +317,8 @@
   color: var(--black-color);
   margin: 136px 91px 79px 119px;
 }
-
-.team {
-  padding-top: 103px;
-  margin-bottom: 197px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.teamImg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  margin-bottom: 60px;
-  border-radius: 50%;
-}
-
-.teamTitle {
-  font-family: var(--title);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 31px;
-  text-align: center;
-
-  color: var(--blue-text-color);
-}
-
-.teamSubTitle {
-  font-family: var(--other);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 25px;
-
-  text-align: center;
-  color: var(--black-color);
-
-  padding-bottom: 20px;
-}
-
-.teamDescription {
-  font-family: var(--other);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
-
-  text-align: center;
-  color: var(--black-color);
-
-  width: 300px;
-
-  padding-bottom: 20px;
-}
-
-.teamBtn {
-  font-family: var(--other);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 30px;
-
-  text-align: center;
-  color: var(--black-color);
-
-  width: 200px;
-  height: 60px;
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-
-  padding-top: 15px;
-
-  background-color: var(--orange-color) !important;
-  border: 1px solid var(--orange-color) !important;
-  border-radius: 10px;
-  color: var(--black-color);
-}
-
-.teamBtn:hover {
-  background-color: var(--orange-hover-color) !important;
-  border: 1px solid var(--orange-hover-color) !important;
+.applProj {
+  margin-left: 220px;
 }
 
 .deskHidden {
