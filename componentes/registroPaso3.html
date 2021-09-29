@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RegistroPaso3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>RegistroPaso3</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
-    />
-
-    <!-- Bootstrap ICON - start -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
     <!-- CSS - start -->
     <link rel="stylesheet" href="../css/navbar.css" />
@@ -24,129 +23,124 @@
     <link rel="stylesheet" href="../css/footer.css" />
     <!-- CSS - end -->
   </head>
-  <body>
-    <!-- Navbar sin botones - start -->
-    <nav class="navbar navbar-light" id="navbg">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../index.html">
-          <img
-            src="../public/img/Logo(2).svg"
-            alt=""
-            width="213"
-            height="54"
-            class="d-inline-block"
-            id="logonsb"
-          />
-        </a>
-      </div>
-    </nav>
-    <!-- Navbar sin botones - end -->
 
-    <!-- Registro paso 1 - start -->
-
-    <div class="container1">
-      <button id="goBack" onClick="goBack()" class="btnGoBack">
-        <img
-          src="../public/img/Vector.svg"
-          alt="boton para ir atras"
-          id="arrowOrange"
-          class="arrowOrange"
-        />
-      </button>
-      <h1 class="title--principal">Casi listo tu perfíl en Colab Orange</h1>
-
-      <!-- formulario e imagen principal -->
-      <div class="form mx-3 my-4 form-img" id="form-img">
-        <form action="#">
-          <div class="">
-            <label for="redes" class="form-label">Redes Sociales</label>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="https://ejemplo-tu-perfil.com"
-            />
-            <input
-              type="text"
-              class="form-control my-3"
-              placeholder="https://www.ejemplo.com/"
-            />
-          </div>
-
-          <div class="label-select mt-5">
-            <label for="tags" class="form-label">Tu Stack</label>
-            <select name="tags" class="select" id="select">
-              <option selected>Selecciona tus stack</option>
-              <option value="Diseño">Diseño</option>
-              <option value="Desarrollo">Desarrollo</option>
-              <option value="HTML">HTML</option>
-              <option value="CSS">CSS</option>
-              <option value="Xd">Xd</option>
-              <option value="UX">UX</option>
-              <option value="UI">UI</option>
-              <option value="Figma">Figma</option>
-              <option value="JavaScript">JavaScript</option>
-              <option value="React">React</option>
-              <option value="Next">Next</option>
-            </select>
-          </div>
-          <ul id="tags"></ul>
-          <button
-            class="mt-5 btn btn-lg btn--form btn-block py-2"
-            type="submit"
-          >
-            Registrarme
-          </button>
-        </form>
-        <img
-          src="../public/img/image3.svg"
-          alt="chique emocionado por estar en el último paso para su perfil"
-          class="img-login"
-        />
-      </div>
-      <!-- formulario e imagen principal -->
+<body>
+  <!-- Navbar sin botones - start -->
+  <nav class="navbar navbar-light" id="navbg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../public/img/Logo(2).svg" alt="" width="213" height="54" class="d-inline-block" id="logonsb" />
+      </a>
     </div>
+  </nav>
+  <!-- Navbar sin botones - end -->
 
-    <!-- Footer - start -->
-    <footer class="py-3">
-      <div class="text-center">
-        <a class="text-decoration-none" href="#">
-          <img src="../public/img/Logo.svg" alt="" class="footer-icon" />
-        </a>
-        <br />
-        <a class="text-decoration-none" href="#">
-          <b class="textlog green">Colab</b>
-          <b class="textlog orange">Orange</b>
-        </a>
-      </div>
+  <!-- CSS - start -->
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/registroPaso3.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <!-- CSS - end -->
+  </head>
+
+  <div class="container1">
+    <button id="goBack" onClick="goBack()" class="btnGoBack">
+      <img src="../public/img/Vector.svg" alt="boton para ir atras" id="arrowOrange" class="arrowOrange" />
+    </button>
+    <h1 class="title--principal">Casi listo tu perfíl en Colab Orange</h1>
+
+    <!-- formulario e imagen principal -->
+    <div class="form mx-3 my-4 form-img" id="form-img">
+      <form action="#" id="formSignUp">
+        <div class="">
+          <label for="redes" class="form-label">Redes Sociales</label>
+          <input id="redes" type="text" class="form-control" placeholder="https://ejemplo-tu-perfil.com" />
+          <input id="redes1" type="text" class="form-control my-3" placeholder="https://www.ejemplo.com/" />
+        </div>
+
+        <div class="label-select mt-5">
+          <label for="tags" class="form-label">Tu Stack</label>
+          <select name="tags" class="select" id="select">
+            <option selected>Selecciona tus stack</option>
+            <option value="Diseño">Diseño</option>
+            <option value="Desarrollo">Desarrollo</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+            <option value="Xd">Xd</option>
+            <option value="UX">UX</option>
+            <option value="UI">UI</option>
+            <option value="Figma">Figma</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="React">React</option>
+            <option value="Next">Next</option>
+          </select>
+        </div>
+        <ul id="tags"></ul>
+        <button id="btnSubmit" class="mt-5 btn btn-lg btn--form btn-block py-2" type="submit">
+          Registrarme
+        </button>
+      </form>
+      <img src="../public/img/image3.svg" alt="chique emocionado por estar en el último paso para su perfil"
+        class="img-login" />
+    </div>
+    <!-- formulario e imagen principal -->
+  </div>
+  <!-- formulario e imagen principal -->
+  </div>
+
+  <!-- Footer - start -->
+  <footer class="py-3">
+    <div class="text-center">
+      <a class="text-decoration-none" href="#">
+        <img src="../public/img/Logo.svg" alt="" class="footer-icon" />
+      </a>
       <br />
-      <ul class="nav justify-content-center pb-3 mb-3">
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
-        </li>
-      </ul>
-      <p class="text-center text-white">
-        Hecho por Orange-CMYK4 y Organizado por FEC
-      </p>
-    </footer>
-    <!-- Footer - end -->
+      <a class="text-decoration-none" href="#">
+        <b class="textlog green">Colab</b>
+        <b class="textlog orange">Orange</b>
+      </a>
+    </div>
+    <br />
+    <ul class="nav justify-content-center pb-3 mb-3">
+      <li class="nav-item">
+        <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
+      </li>
+    </ul>
+    <p class="text-center text-white">
+      Hecho por Orange-CMYK4 y Organizado por FEC
+    </p>
+  </footer>
+  <!-- Footer - end -->
 
-    <script src="../js/registro-paso3.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-      crossorigin="anonymous"
-    ></script>
-    <script src="../js/navbar.js"></script>
-    <script>
-      function goBack() {
-        window.history.back();
-      }
-    </script>
-  </body>
+  <script src="../js/registro3.js" type="module"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+
+<script src="../js/registro-paso3.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="../js/navbar.js"></script>
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+</body>
+
 </html>
