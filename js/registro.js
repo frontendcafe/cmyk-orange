@@ -32,10 +32,13 @@ registrationForm.addEventListener("submit", (e) => {
         console.log(userCredential);
         console.log("sign up");
 
-        localStorage.setItem("name", name1);
-        localStorage.setItem("email", email);
-        localStorage.setItem("uid", userCredential.user.uid);
-        //db.collection("Users").doc(userCredential.user.uid).set(usuario);
+        const usuario = {
+          name: name1,
+          email: email,
+          uid: userCredential.user.uid,
+        };
+
+        localStorage.setItem("user", JSON.stringify(usuario));
 
         window.location.assign(`registro-paso2.html`);
       })

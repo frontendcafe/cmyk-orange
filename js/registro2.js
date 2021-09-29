@@ -17,23 +17,26 @@ const auth = firebase.auth();
 
 const submitBtn = document.querySelector(".submitBtn");
 const uploadPhoto = document.querySelector(".uploadPhoto");
-const aboutMe = document.querySelector("#textarea");
+const aboutMe = document.querySelector("#textarea1");
+
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  localStorage.setItem("userPhoto", uploadPhoto);
-  localStorage.setItem("aboutMe", JSON.stringify(aboutMe));
+
+  const usuario = JSON.parse(localStorage.getItem("user"));
+  console.log("uploadPhoto");
+  console.log("aboutMe");
+  usuario.userPhoto = uploadPhoto;
+  usuario.aboutMe = aboutMe.value;
+
+  localStorage.setItem("user", JSON.stringify(usuario));
+
   window.location.assign(`registroPaso3.html`);
 });
 
 //Verifico UID luego de registrado y creado en firestore el User
 auth.onAuthStateChanged((user) => {
   if (user) {
-    const uid = localStorage.getItem("uid");
-    const name = localStorage.getItem("name");
-    const email = localStorage.getItem("email");
-    console.log(uid);
-    console.log(name);
-    console.log(email);
+    console.log("Se registró ningún usuario");
   } else {
     console.log("No se registro ningún usuario");
   }
