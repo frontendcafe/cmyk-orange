@@ -19,23 +19,6 @@ const projects = async () => {
 };
 projects();
 
-/***** boton de Empieza ya *****/
-const empiezaYa = document.querySelector("#btnStartNow");
-
-empiezaYa.addEventListener("click", (e) => {
-  e.preventDefault();
-  auth.onAuthStateChanged((user) => {
-    if (user) {
-      localStorage.setItem("iD", user.uid);
-      window.location.assign(`componentes/buscarProyecto.html`); //deberia ser buscarproyectos.html
-    } else {
-      // User is signed out
-      alert("Primero debes acceder a tu cuenta o registrarte");
-      window.location.assign(`login.html`);
-    }
-  });
-});
-
 /***** boton de Creá tu proyecto*****/
 const createProject = document.querySelector("#createProject");
 
