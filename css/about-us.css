@@ -108,7 +108,64 @@
     display: none;
   }
   
+  #toolmob1, #toolmob2, #toolmob3 {
+    background-color: var(--white-color);
+    font-weight: bold;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 4px;
+    
+    display: none;
+    
+    padding: 10px !important;
+    border: 1px solid var(--blue-text-color);
+    
+    transform: translate3d(50px, -60px, 0px) !important;
+  }
   
+  .mobTitle{
+    font-family: var(--title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    
+    text-align: left;
+    color: var(--blue-text-color) !important;
+    
+    margin-top: 0 !important;
+  }
+  
+  .mobIcon{
+    color: var(--popIcon-color);
+    background-color: var(--white-color);
+    
+    border: 1px solid var(--white-color);
+    
+    margin-left: 0px !important;
+    font-size: 1rem !important;
+    display: inline !important;
+    
+    /* padding: 0 25px 0 0; */
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .mobText{
+    font-family: var(--other);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    
+    margin: 0 !important;
+    margin-top: 4px !important;
+    margin-left: 4px !important;
+  }
+  
+  .input-group{
+    height: 30px !important;
+  }
 }
 /************** media query MOBILE/TABLET - end ***************/
 
@@ -222,15 +279,15 @@
     
     padding-top: 15px;
     
-    background-color: var(--orange-color);
-    border: 1px solid var(--orange-color);
+    background-color: var(--orange-color) !important;
+    border: 1px solid var(--orange-color) !important;
     border-radius: 10px;
     color: var(--black-color);
   }
   
   .teamBtn:hover{
-    background-color: var(--orange-hover-color);
-    border: 1px solid var(--orange-hover-color);
+    background-color: var(--orange-hover-color) !important;
+    border: 1px solid var(--orange-hover-color) !important;
   }
   
   .deskHidden{
@@ -238,7 +295,7 @@
   }
   
   /* Popper Js - start */
-  #tooltip {
+  #tooltip1, #tooltip2, #tooltip3, #tooltip4 { /* estilos para el Tooltip */
     background-color: var(--white-color);
     font-weight: bold;
     padding: 4px 8px;
@@ -251,10 +308,6 @@
     border: 1px solid var(--blue-text-color);
   }
   
-  #tooltip[data-show] {
-    display: block;
-  }
-  
   .popTitle{
     font-family: var(--title);
     font-style: normal;
@@ -265,7 +318,7 @@
     color: var(--blue-text-color);
     
     margin-left: 36px;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
   }
   
   .popIcon{
