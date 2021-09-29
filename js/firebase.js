@@ -19,23 +19,6 @@ const projects = async () => {
 };
 projects();
 
-/***** boton de Empieza ya *****/
-const empiezaYa = document.querySelector("#btnStartNow");
-
-empiezaYa.addEventListener("click", (e) => {
-  e.preventDefault();
-  auth.onAuthStateChanged((user) => {
-    if (user) {
-      localStorage.setItem("iD", user.uid);
-      window.location.assign(`componentes/buscarProyecto.html`); //deberia ser buscarproyectos.html
-    } else {
-      // User is signed out
-      alert("Primero debes acceder a tu cuenta o registrarte");
-      window.location.assign(`login.html`);
-    }
-  });
-});
-
 /***** boton de Creá tu proyecto*****/
 const createProject = document.querySelector("#createProject");
 
@@ -67,6 +50,43 @@ applyProject.addEventListener("click", (e) => {
     }
   });
 });
+
+//boton de crear proyecto en Navbar
+const createProj = document.querySelector("#createProj");
+createProj.addEventListener("click", (e) => {
+  e.preventDefault();
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      window.location.assign(`componentes/publicacion.html`);
+    } else {
+      // User is signed out
+      alert("Primero debes acceder a tu cuenta o registrarte");
+      window.location.assign(`../login.html`);
+    }
+  });
+});
+
+//cambio de botón iniciar sesion (version mobile) por cerrar sesion en Navbar
+firebase.auth().onAuthStateChanged((user) => {
+  const logout = document.querySelector(".logout");
+  if (user) {
+    logout.innerHTML = "Cerrar Sesion";
+    var uid = user.uid;
+    console.log(uid);
+  }
+});
+
+//cambio de botón iniciar sesion (version Desktop) por cerrar sesion en Navbar
+firebase.auth().onAuthStateChanged((user) => {
+  const logout2 = document.querySelector(".logout2");
+  if (user) {
+    logout2.innerHTML = "Cerrar Sesion";
+    var uid = user.uid;
+    console.log(uid);
+  }
+});
+
+//Logout
 
 //
 // auth.onAuthStateChanged((user) => {

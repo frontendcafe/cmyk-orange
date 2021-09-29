@@ -8,8 +8,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script type="module" src="js/firebase.js"></script>
-    <script type="module" src="/js/main.js"></script>
+
+    <script type="module" src="/js/firebase.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -182,9 +182,13 @@
     <div class="container-home outNav">
       <h1>ColabOrange conecta programadores y diseñadores con ideas.</h1>
       <div class="grid">
-        <button id="btnStartNow" class="btnCta">
-          <p>Empieza ya</p>
-        </button>
+        <a
+          id="btnStartNow"
+          class="btnCta"
+          href="../componentes/buscarProyecto.html"
+        >
+          Empieza ya
+        </a>
         <img
           src="public/img/Group_157.svg"
           alt="four people to represent the app"
