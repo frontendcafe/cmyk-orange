@@ -189,7 +189,7 @@ nav,
 
   #logonsb {
     /* tamaño del logo naranja */
-    width: 24px !important;
+    width: auto !important;
     height: 24px !important;
 
     margin-left: 12px !important;
@@ -251,6 +251,12 @@ nav,
   }
 
   .xTag {
+    display: none !important;
+    margin: 4px 4px;
+  }
+  
+  .logoHidden{
+    margin: 8px 9px 10px 12px;
     display: none !important;
   }
 }

@@ -1,0 +1,90 @@
+/************** Custom Properties ***************/
+/* Google Fonts - start */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap"); /* titulos */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"); /* subtitulos y demas */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+/* Google Fonts - end */
+
+:root {
+  --orange-color: #ff9d00;
+  --orange-hover-color: #fd7c19;
+  --blue-text-color: #125E8A;
+
+
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  --title: "Lora";
+  --other: "Nunito";
+}
+/************** Custom Properties ***************/
+
+
+/************** media query MOBILE/TABLET - start ***************/
+@media only screen and (max-width: 991px) {
+  .aboutTitle{ /* titulos con texto azul */
+    font-family: Lora;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    
+    text-align: center;
+    color: var(--blue-text-color);
+    
+    margin-top: 56px;
+  }
+  
+  .aboutImgMobile{ /* imagen de 04 personas en vista mobile */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .aboutIntro{ /* texto debajo de imagen anterior */
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    
+    text-align: center;
+    letter-spacing: 0.025em;
+    
+    color: var(--black-color);
+    margin: 58px 21px 88px 21px;
+  }
+  
+  .carouselImgMobile{ /* imagen del carousel */
+    height: 129px;
+    width: 102px;
+    margin-top: 36px;
+    margin-bottom: 250px;
+  }
+  
+  .aboutSubTitle{ /* subtitulo de carousel */
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  .aboutDescription{ /* descripcion del carousel */
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  .carouselAll{ /* para espaciado entre carousel y footer */
+    margin-bottom: 102px;
+  }
+}
+/************** media query MOBILE/TABLET - end ***************/
+
+
+/************** About us Desktop - start ***************/
+  
+/************** About us Desktop - end ***************/

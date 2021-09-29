@@ -1,139 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@500;700&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap%22");
 /************** Custom Properties ***************/
 :root {
-    
-    --orange-color: #FF9D00;
-    
-    /* Publicacion de proyecto - start */
-    --white-color: #FFFFFF;
-    --black-color: #000000;
-    --formInput-color: #696871;
-    --pub-formInput-bg-color: #FFE7BA;  
-    --pub-formBtn-color: #031D44;
-    --pub-formBtn-bg-color: #FB8500;
-    --pub-title-color: #125E8A;
-    
-    --pub-font-title: 'Lora';
-    --pub-font-formLabel: 'Roboto';
-    --pub-font-formInput: 'Nunito';
-    --pub-font-formBtn: 'PT Sans';
-    
-    /* Publicacion de proyecto - end */
+  --orange-color: #ff9d00;
+
+  /* Publicacion de proyecto - start */
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --formInput-color: #696871;
+  --pub-formInput-bg-color: #ffe7ba;
+  --pub-formBtn-color: #031d44;
+  --pub-formBtn-hover-color: #fd7c19;
+  --pub-title-color: #125e8a;
+
+  --pub-font-title: "Lora";
+  --pub-font-formInput: "Nunito";
+
+  /* Publicacion de proyecto - end */
 }
 /************** Custom Properties ***************/
 
-
-/************** Publicacion de proyecto - start ***************/
-/* Icono flecha naranja - start */
-#arrowOrange{
-    margin-top: 54px;
-    margin-left: 69px;
+/************** Versión mobile Publicacion de proyecto - start ***************/
+.btnGoBack {
+  background-color: transparent;
+  border: none;
+  margin: 32px 0px 0px 20px;
 }
-/* Icono flecha naranja - end */
-
-#pubTitle{ /* titulo: ¿De que trata tu proyecto? */
-    font-family: var(--pub-font-title);
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 56px;
-    text-align: center;
-    
-    color: var(--pub-title-color);
+#pubTitle {
+  /* titulo: ¿De que trata tu proyecto? */
+  font-family: var(--pub-font-title);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  color: var(--pub-title-color);
 }
-
-#pubColumn{ /* division en columnas Formulario / imagen */
-    display: flex;
-    justify-content: center;
-    
-    margin-top: 118px; /* distancia entre Titulo y Formulario */
-    margin-bottom: 116px;
+#pubColumn {
+  /* division en columnas Formulario / imagen */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px; /* distancia entre Titulo y Formulario */
+  margin-bottom: 116px;
 }
-
+#pubColumn > form {
+  /* formulario */
+  order: 2;
+  width: 100%;
+  max-width: 320px;
+  padding: 0px;
+}
+#pubColumn > form > div > label {
+  /* todos los form label */
+  color: var(--black-color);
+  font-family: var(--pub-font-formLabel);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17.5px;
+  margin-bottom: 10px;
+}
+#pubColumn > form > div > input {
+  /* los 03 form input */
+  background-color: var(--pub-formInput-bg-color);
+  font-family: var(--pub-font-formInput);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17.5px;
+  padding-left: 19px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+}
 /* Imagen - start */
-#pubColumn > img{ /* imagen lado derecho */
-    width: 639px;
-	height: 650px;
-	object-fit: none; /* recorte de la imagen */
+#pubColumn > img {
+  /* imagen lado derecho */
+  order: 1;
+  width: 100%;
+  max-width: 320px;
 }
 /* Imagen - end */
 
-/* Formulario - start */
-#pubColumn > form{ /* formulario */
-	border: 1px solid var(--orange-color);
+#formDP {
+  /* form textarea */
+  background-color: var(--pub-formInput-bg-color);
+  font-family: var(--pub-font-formInput);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17.5px;
+  padding-top: 10px;
+  padding-left: 11px;
+  width: 100%;
+  height: 150px;
+  border: none;
+  border-radius: 10px;
+}
+#formBtn {
+  /* form boton siguiente */
+  color: var(--pub-formBtn-color);
+  background-color: var(--orange-color);
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17.5px;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  margin-top: 40px;
+}
+#formBtn:hover {
+  color: white;
+  background-color: var(--pub-formBtn-hover-color);
+}
+/************** Versión mobile Publicacion de proyecto - end ***************/
+
+/************** Versión Desktop Publicacion de proyecto - start ***************/
+@media (min-width: 768px) {
+  /* Icono flecha naranja - start */
+  .btnGoBack {
+    margin: 54px 0px 0px 70px;
+  }
+  /* Icono flecha naranja - end */
+
+  #pubTitle {
+    /* titulo: ¿De que trata tu proyecto? */
+    font-family: var(--pub-font-title);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 48.6px;
+    text-align: center;
+    color: var(--pub-title-color);
+  }
+
+  #pubColumn {
+    /* division en columnas Formulario / imagen */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 118px; /* distancia entre Titulo y Formulario */
+    margin-bottom: 116px;
+  }
+
+  /* Imagen - start */
+  #pubColumn > img {
+    /* imagen lado derecho */
+    order: 2;
+    max-width: 500px;
+  }
+  /* Imagen - end */
+
+  /* Formulario - start */
+  #pubColumn > form {
+    /* formulario */
+    order: 1;
+    max-width: 500px;
+    border: 1px solid var(--orange-color);
     box-sizing: border-box;
     border-radius: 24px;
-    
     padding: 46px 52px 51px 53px;
-}
+  }
 
-#pubColumn > form > div > label{ /* todos los form label */
-    color: var(--black-color);
-    
-    font-family: var(--pub-font-formLabel);
-    font-weight: 400;
-    font-style: normal;
+  #pubColumn > form > div > label {
+    /* todos los form label */
     font-size: 20px;
     line-height: 23px;
-    
+    font-weight: 400;
     margin-bottom: 10px;
-}
+  }
 
-#pubColumn > form > div > input{ /* los 03 form input */
-    color: var(--formInput-color);
-    background-color: var(--pub-formInput-bg-color);
-    
-    font-family: var(--pub-font-formInput);
+  #pubColumn > form > div > input {
+    /* los 03 form input */
     font-weight: 400;
-    font-style: normal;
     font-size: 18px;
     line-height: 25px;
-    
     padding-left: 19px;
-    
-    width: 400px;
-    height: 50px;
+    max-width: 500px;
     border-radius: 10px;
-}
+  }
 
-#formDP{ /* form textarea */
-    resize: none;
-    
-    color: var(--formInput-color);
-    background-color: var(--pub-formInput-bg-color);
-    
-    font-family: var(--pub-font-formInput);
-    font-weight: 400;
-    font-style: normal;
+  #formDP {
+    /* form textarea */
     font-size: 18px;
     line-height: 25px;
-    
     padding-top: 22px;
     padding-left: 19px;
-    
-    width: 400px;
-    height: 150px;
     border-radius: 10px;
-}
+  }
 
-#formBtn{ /* form boton siguiente */
-    color: var(--pub-formBtn-color);
-    background-color: var(--pub-formBtn-bg-color);
-    
-    font-family: var(--pub-font-formBtn);
-    font-style: normal;
-    font-weight: bold;
+  #formBtn {
+    /* form boton siguiente */
     font-size: 20px;
     line-height: 26px;
-    
-    border: 1px solid var(--pub-formBtn-bg-color);
     border-radius: 10px;
-    
     height: 60px;
-    width: 400px;
-    
-    margin-top: 40px;
+    max-width: 500px;
+  }
+
+  /* Formulario - end */
+
+  /************** Versión Desktop Publicacion de proyecto - end ***************/
 }
-
-/* Formulario - end */
-
-/************** Publicacion de proyecto - end ***************/
