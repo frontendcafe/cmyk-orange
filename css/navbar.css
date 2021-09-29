@@ -30,6 +30,10 @@
 
 /* Navbar sin botones - start */
 /* Bootstrap navbar - start */
+button {
+  background-color: transparent;
+  border: none;
+}
 .navbar,
 .navbar-brand,
 .container-fluid {
@@ -254,8 +258,8 @@ nav,
     display: none !important;
     margin: 4px 4px;
   }
-  
-  .logoHidden{
+
+  .logoHidden {
     margin: 8px 9px 10px 12px;
     display: none !important;
   }

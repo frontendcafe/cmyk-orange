@@ -6,6 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Publicación de proyecto</title>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script type="module" src="../js/publicacion.js"></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
@@ -28,153 +34,244 @@
         <span class="navbar-toggler-icon"><i class="bi bi-x-lg deskHidden xTag"></i></span>
       </button>
 
-      <a class="navbar-brand" href="../index.html">
-        <img src="../public/img/Logo(2).svg" alt="" width="213" height="54" class="d-inline-block" id="logonsb" />
-        <img src="../public/img/Logo.svg" alt="" width="auto" height="24" class="deskHidden logoHidden" />
-      </a>
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Publicación de proyecto</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
 
-      <span class="deskHidden iconoLupa">
-        <i class="bi bi-search"></i>
-      </span>
+        <!-- Bootstrap ICON - start -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 
-      <form class="d-flex input-group deskHidden mobileHidden" id="buscar">
-        <input class="form-control mobileHidden" type="search" placeholder="Buscar" aria-label="Search"
-          id="txtbuscar" />
-        <span class="input-group-text mobileHidden spanLupa" id="basic-addon2"><i class="bi bi-search"></i></span>
-      </form>
+        <!-- CSS - start -->
+        <link rel="stylesheet" href="../css/publicacion.css" />
+        <link rel="stylesheet" href="../css/navbar.css" />
+        <link rel="stylesheet" href="../css/footer.css" />
+        <!-- CSS - end -->
+      </head>
 
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+      <body>
+        <!-- Navbar con botones - start -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbg">
+          <div class="container-fluid navMobile">
+            <button class="navbar-toggler custom-toggler hamburguesa" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"><i class="bi bi-x-lg deskHidden xTag"></i></span>
+            </button>
 
-        <span class="navbar-text">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="mobileHidden">
-              <form class="d-flex input-group" id="buscar">
-                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" id="txtbuscar" />
-                <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
-              </form>
-            </li>
+            <a class="navbar-brand" href="../index.html">
+              <img src="../public/img/Logo(2).svg" alt="" width="213" height="54" class="d-inline-block" id="logonsb" />
+              <img src="../public/img/Logo.svg" alt="" width="auto" height="24" class="deskHidden logoHidden" />
+            </a>
 
-            <li class="nav-item">
-              <a class="nav-link active deskHidden textncb" href="#">Iniciar Sesión</a>
-            </li>
+            <span class="deskHidden iconoLupa">
+              <i class="bi bi-search"></i>
+            </span>
 
-            <li class="nav-item">
-              <a class="nav-link textncb" aria-current="page" href="#">Crear un proyecto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link textncb" href="#">Buscar un proyecto</a>
-            </li>
+            <form class="d-flex input-group deskHidden mobileHidden" id="buscar">
+              <input class="form-control mobileHidden" type="search" placeholder="Buscar" aria-label="Search"
+                id="txtbuscar" />
+              <span class="input-group-text mobileHidden spanLupa" id="basic-addon2"><i class="bi bi-search"></i></span>
+            </form>
 
-            <!-- Oculto en Log Out o mientras no inicia sesion - start -->
-            <li class="nav-item">
-              <a class="nav-link textncb hideLogOut" href="#">Mi perfil</a>
-            </li>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
-            <li class="nav-item">
-              <a class="nav-link textncb hideLogOut" href="#">Mis Proyectos</a>
-            </li>
+              <span class="navbar-text">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="mobileHidden">
+                    <form class="d-flex input-group" id="buscar">
+                      <input class="form-control" type="search" placeholder="Buscar" aria-label="Search"
+                        id="txtbuscar" />
+                      <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+                    </form>
+                  </li>
 
-            <li class="nav-item">
-              <a class="nav-link textncb hideLogOut" href="#">Mis Postulaciones</a>
-            </li>
+                  <li class="nav-item">
+                    <a class="nav-link active deskHidden textncb" href="#">Iniciar Sesión</a>
+                  </li>
 
-            <li class="nav-item">
-              <a class="nav-link textncb hideLogOut" href="#">Cerrar Sesión</a>
-            </li>
-            <!-- Oculto en Log Out o mientras no inicia sesion - end -->
+                  <li class="nav-item">
+                    <a class="nav-link textncb" aria-current="page" href="#">Crear un proyecto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link textncb" href="#">Buscar un proyecto</a>
+                  </li>
 
-            <li class="nav-item text-end mobileHidden">
-              <a class="nav-link btn btn-primary" href="#" id="textbtn">Iniciar Sesión</a>
-            </li>
-          </ul>
-        </span>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar con botones - end -->
+                  <!-- Oculto en Log Out o mientras no inicia sesion - start -->
+                  <li class="nav-item">
+                    <a class="nav-link textncb hideLogOut" href="#">Mi perfil</a>
+                  </li>
 
-  <button id="goBack" onClick="goBack()" class="btnGoBack">
-    <img src="../public/img/Vector.svg" alt="boton para ir atras" id="arrowOrange" class="arrowOrange" />
-  </button>
-  <div class="container outNav">
-    <h1 id="pubTitle">¿De qué trata tu proyecto?</h1>
+                  <li class="nav-item">
+                    <a class="nav-link textncb hideLogOut" href="#">Mis Proyectos</a>
+                  </li>
 
-    <div id="pubColumn">
-      <form id="formProject">
-        <div class="mb-4">
-          <label for="formNombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" placeholder="Nombre" id="formNombre" />
-        </div>
-        <div class="mb-4">
-          <label for="formEmail" class="form-label">E-mail</label>
-          <input type="email" class="form-control" placeholder="Email" id="formEmail" />
-        </div>
-        <div class="mb-4">
-          <label for="formNP" class="form-label">Nombre del proyecto</label>
-          <input type="text" class="form-control" placeholder="Nombre del proyecto" id="formNP" />
-        </div>
+                  <li class="nav-item">
+                    <a class="nav-link textncb hideLogOut" href="#">Mis Postulaciones</a>
+                  </li>
 
-        <div class="form-group">
-          <label for="formDP">Descripción del proyecto</label>
-          <textarea class="form-control" id="formDP" rows="3" placeholder="Descripcion del proyecto"></textarea>
-        </div>
+                  <li class="nav-item">
+                    <a class="nav-link textncb hideLogOut" href="#">Cerrar Sesión</a>
+                  </li>
+                  <!-- Oculto en Log Out o mientras no inicia sesion - end -->
 
-        <button type="submit" class="btn btn-primary" id="formBtn">
-          Siguiente
+                  <li class="nav-item text-end mobileHidden">
+                    <a class="nav-link btn btn-primary" href="#" id="textbtn">Iniciar Sesión</a>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar con botones - end -->
+
+        <button id="goBack" onClick="goBack()" class="btnGoBack">
+          <img src="../public/img/Vector.svg" alt="boton para ir atras" id="arrowOrange" class="arrowOrange" />
         </button>
-      </form>
+        <div class="container outNav">
+          <h1 id="pubTitle">¿De qué trata tu proyecto?</h1>
 
-      <img src="../public/img/Group 85.svg" alt="" />
-    </div>
-  </div>
-  <footer class="py-3">
-    <div class="text-center">
-      <a class="text-decoration-none" href="#">
-        <img src="../public/img/Logo.svg" alt="" class="footer-icon" />
-      </a>
-      <br />
-      <a class="text-decoration-none" href="#">
-        <b class="textlog green">Colab</b>
-        <b class="textlog orange">Orange</b>
-      </a>
-    </div>
-    <br />
-    <ul class="nav justify-content-center pb-3 mb-3">
-      <li class="nav-item">
-        <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
-      </li>
-      <li class="nav-item">
-        <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
-      </li>
-    </ul>
-    <p class="text-center text-white">
-      Hecho por Orange-CMYK4 y Organizado por FEC
-    </p>
-  </footer>
+          <div id="pubColumn">
+            <form id="formProject">
+              <div class="mb-4">
+                <label for="formNombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" placeholder="Nombre" id="formNombre" />
+              </div>
+              <div class="mb-4">
+                <label for="formEmail" class="form-label">E-mail</label>
+                <input type="email" class="form-control" placeholder="Email" id="formEmail" />
+              </div>
+              <div class="mb-4">
+                <label for="formNP" class="form-label">Nombre del proyecto</label>
+                <input type="text" class="form-control" placeholder="Nombre del proyecto" id="formNP" />
+              </div>
 
-  <!-- Jquery CDN -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+              <div class="form-group">
+                <label for="formDP">Descripción del proyecto</label>
+                <textarea class="form-control" id="formDP" rows="3" placeholder="Descripcion del proyecto"></textarea>
+                <form class="d-flex input-group deskHidden mobileHidden" id="buscar">
+                  <input class="form-control mobileHidden" type="search" placeholder="Buscar" aria-label="Search"
+                    id="txtbuscar" />
+                  <span class="input-group-text mobileHidden spanLupa" id="basic-addon2"><i
+                      class="bi bi-search"></i></span>
+                </form>
 
-  <!-- Bootstrap script -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
-  <script type="module" src="../js/publicar-paso1.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+                  <span class="navbar-text">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="mobileHidden">
+                        <form class="d-flex input-group" id="buscar">
+                          <input class="form-control" type="search" placeholder="Buscar" aria-label="Search"
+                            id="txtbuscar" />
+                          <span class="input-group-text" id="basic-addon2"><i class="bi bi-search"></i></span>
+                        </form>
+                      </li>
 
-  <script src="../js/navbar.js"></script>
-  <script>
-    function goBack() {
-      window.history.back();
-    }
-  </script>
-</body>
+                      <li class="nav-item">
+                        <a class="nav-link active deskHidden textncb logout" href="../login.html" id="logout">
+                          Iniciar Sesión
+                        </a>
+                      </li>
+
+                      <li class="nav-item">
+                        <button class="nav-link textncb" aria-current="page" id="createProj">
+                          Crear un proyecto
+                        </button>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link textncb" href="../componentes/buscarProyecto.html">
+                          Buscar un proyecto
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link textncb" href="../componentes/about-us.html">
+                          About us
+                        </a>
+                      </li>
+                      <!-- Oculto en Log Out o mientras no inicia sesion - start -->
+                      <li class="nav-item">
+                        <a class="nav-link textncb hideLogOut" href="../componentes/about-us.html">
+                          About us
+                        </a>
+                      </li>
+
+                      <li class="nav-item">
+                        <button class="nav-link textncb hideLogOut" id="createProj">
+                          Crear un proyecto
+                        </button>
+                      </li>
+
+                      <li class="nav-item">
+                        <button class="nav-link textncb hideLogOut">
+                          Buscar un proyecto
+                        </button>
+                      </li>
+
+                      <li class="nav-item">
+                        <button class="nav-link textncb hideLogOut">
+                          Cerrar Sesión
+                        </button>
+                      </li>
+                      <!-- Oculto en Log Out o mientras no inicia sesion - end -->
+
+                      <li class="nav-item text-end mobileHidden">
+                        <a class="nav-link btn btn-primary logout2" href="../login.html" id="textbtn">
+                          Iniciar Sesión
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="formBtn">
+                  Siguiente
+                </button>
+            </form>
+
+            <img src="../public/img/Group 85.svg" alt="" />
+          </div>
+        </div>
+        <footer class="py-3">
+          <div class="text-center">
+            <a class="text-decoration-none" href="#">
+              <img src="../public/img/Logo.svg" alt="" class="footer-icon" />
+            </a>
+            <br />
+            <ul class="nav justify-content-center pb-3 mb-3">
+              <li class="nav-item">
+                <a href="#" class="nav-link px-5 text-white">Crea un Proyecto</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-5 text-white">Buscar un Proyecto</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link px-5 text-white">Sobre Nosotros</a>
+              </li>
+            </ul>
+            <p class="text-center text-white">
+              Hecho por Orange-CMYK4 y Organizado por FEC
+            </p>
+        </footer>
+
+        <!-- Jquery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../js/navbar.js"></script>
+        <script src="../js/publicar-paso1.js"></script>
+        <!-- Bootstrap script -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+          crossorigin="anonymous"></script>
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        </script>
+      </body>
 
 </html>

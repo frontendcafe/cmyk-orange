@@ -11,21 +11,3 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebase.auth();
-
-/************ Boton de atrás ************/
-// const goBack = document.querySelector("#goBack");
-// goBack.addEventListener("click", (e) => {
-//   Location.assign();
-// });
-
-/***** boton de Contactar *****/
-// const formBtn = document.querySelector("#formBtn");
-
-// formBtn.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   db.collection("project").doc("OPGE5WRuwZhNMiSGQoCw").set();
-// });
-// db.collection("projects").doc("OPGE5WRuwZhNMiSGQoCw").set({
-//   name: "Proyecto 45",
-//   userId: "123",
-// });
